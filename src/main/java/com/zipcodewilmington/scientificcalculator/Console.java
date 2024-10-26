@@ -29,4 +29,17 @@ public class Console {
     public static Double getDoubleInput(String prompt) {
         return null;
     }
+
+    public static void clearTheScreen() {
+        System.out.print("\033\143");
+    }
+
+
+
+
+
+
+
+
+
 }

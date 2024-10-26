@@ -56,6 +56,16 @@ public class Core {
 
     }
 
+
+    //Maisha
+    public double invertSign(double input1) {
+        return input1 = -input1;
+    }
+
+    public double inverse(double input1) {
+        return input1 = 1/input1;
+    }
+
     
 
 }

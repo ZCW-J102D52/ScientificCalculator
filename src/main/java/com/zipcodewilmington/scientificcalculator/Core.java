@@ -1,5 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
+
 import java.lang.Math;
 
 public class Core {
@@ -23,3 +24,5 @@ public class Core {
         return pow2;
     }
 }
+
+

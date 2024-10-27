@@ -20,7 +20,7 @@ All features must be tested with Test classes. Tests must include normal behavio
 
 You must produce UML diagrams for your program. All classes (excluding test classes) must be included in the UML class diagrams. Each class should have a UML box, with variables and a list of methods.
 
-### Core Features 
+### com.zipcodewilmington.scientificcalculator.Core Features 
 
 All calculators should have the following features:
 
@@ -68,7 +68,7 @@ Each operation should automatically update the display
 
 ### Custom Features
 
-In addition to the Core and Scientific features, you are required to create at least two of your own features for the calculator. They can be any two features that are not already covered and that you can implement as you see fit. These features must be properly tested.
+In addition to the com.zipcodewilmington.scientificcalculator.Core and Scientific features, you are required to create at least two of your own features for the calculator. They can be any two features that are not already covered and that you can implement as you see fit. These features must be properly tested.
 
 ### Hints
 

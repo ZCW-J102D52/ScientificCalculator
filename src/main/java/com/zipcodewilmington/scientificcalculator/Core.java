@@ -2,11 +2,23 @@ package com.zipcodewilmington.scientificcalculator;
 
 
 import java.lang.Math;
+import java.util.Scanner;
 
 public class Core {
 
+    Scanner sc = new Scanner(System.in);
 
-    int input1 = 0;
+     switch (Calculator) {
+        case '*':
+            System.out.println(getMultiply);
+            break;
+        case 'multiply '
+
+
+
+
+
+            int input1 = 0;
     int input2 = 0;
 
     public double square(int input1){

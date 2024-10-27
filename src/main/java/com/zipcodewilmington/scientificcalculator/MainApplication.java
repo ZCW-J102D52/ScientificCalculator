@@ -151,6 +151,7 @@ import java.lang.Math;
                     return degrees;
                       }
                     break;
+                
               //Degrees to Radians Sharmin
                 case "degrees to radians":
                 case "degs to rads":
@@ -163,12 +164,113 @@ import java.lang.Math;
                     double degrees;
                     return radians;
                       }
-                  break;
-                //Square
-                case "square":
-                    System.out.println("squared");
                     break;
+                
+                //Inverse number Deepti
+                case "inverse number":
+                case "inverse num":
+                      InverseFunction inverse = new InverseFunction();
+                      inverse.calculateInverse();
+                      break;
+                //Invert sign Deepti
+                case "invert sign":
+                case "inv sign":
+                      InverseFunction inverse = new InverseFunction();
+                      inverse.calculateInvertSign();
+                      break;
+                //Square Deepti
+                case "square":
+                case "sq":
+                      double square = square(acceptDoubleNum());
+                      System.out.println("Square of the given number is : ");
+                      System.out.printf("%.2f", square);
+                      
+                      public static double square(double x2) {
+                      double square = Math.pow(x2, 2);
+                      return square;
+                        }
+                      break;
+                
+              //Square Root Deepti
+                case "square root":
+                case "sq rt":
+                      double root = squareRoot(acceptDoubleNum());
+                      System.out.println("SquareRoot of the given number is : ");
+                      System.out.printf("%.2f", root);
+                
+                      public static double squareRoot(double x1) {
+                      double result = Math.sqrt(x1);
+                      return result;
+                         }
+                      break;
+                //Exponential Deepti
+                case "exponential":
+                case "expo":
+                case "exponent":
+                      double exponentiation = exponentiation(acceptDoubleNum());
+                      System.out.println("exponentiation of the given number is : ");
+                      System.out.printf("%.2f", exponentiation);
+                        
+                      public static double exponentiation(double x3) {
+                      double exponent = Math.exp(x3);
+                      return exponent;
+                        }
+                      break;
+                //Factorial Deepti
+                case "factorial":
+                case "fact":
+                      long fact = factorial(acceptIntNum());
+                      System.out.println("Factorial of the given number is : " + fact);
+                        
+                      public static long factorial(long n1) {
+                      long result = 1L;
+                      for (long i = 1; i <= n1; i++) {
+                      result *= i;
+                      return result;
+                        }
+                       break;
+                //Log Value Deepti
+                case "log value":
+                case "log val":
+                      double logValue = logFunction(acceptDoubleNum());
+                      System.out.println("Logarithm of the given number is : ");
+                      System.out.printf("%.2f", logValue);
+                        
+                      public static double logFunction(double n1){
+                      double logvalue = Math.log(n1);
+                      return logvalue;
+                        }
+                       break;
+                //Log Function Deepti
+                case "log function":
+                case "log func":
+                        double log10Value = logFunction10(acceptDoubleNum());
+                        System.out.println("Logarithm of the given number is : ");
+                        System.out.printf("%.2f", log10Value);
+                        
+                        public static double logFunction10(double n2) {
+                        double log10result = Math.log10(n2);
+                        return log10result;
+                          }
+                         break;
+                 //Anti Log Deepti
+                 case "anti log":
+                 case "anti logarithm":
+                 case "inverse logarithm":
+                 case "inverse log":
+                        double antiLog = antiLog(acceptDoubleNum());
+                        System.out.println("Inverse Logarithm of the given number is : ");
+                        System.out.printf("%.2f", antiLog);
+                        
+                        public static double antiLog(double n1){
+                        double y = Math.log(n1); // Calculate the natural log of x
+                        double inverselog = Math.exp(y);
+              //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
+              //        double inverselog = Math.pow(base, y);
+                        return inverselog;
 
+                        break;
+                        
                 //Bunny Enda
                 case "bunny":
                     Console.getBunny();
@@ -190,6 +292,23 @@ import java.lang.Math;
                         System.out.print("That's a big bunny!");
                     }
 
+            }
+          
+          // Methods to accept double input value Deepti
+            public static double acceptDoubleNum() {
+                Scanner scan = new Scanner(System.in);
+                System.out.print("Enter any number: ");
+                double x = scan.nextInt();
+                scan.close();
+                return x;
+            }
+            // Methods to accept int input value Deepti
+            public static int acceptIntNum() {
+                Scanner scan = new Scanner(System.in);
+                System.out.print("Enter any number: ");
+                int x = scan.nextInt();
+                scan.close();
+                return x;
             }
             //Quit Enda
             toQuit = Console.toQuit("All done?");
@@ -228,8 +347,5 @@ import java.lang.Math;
             }
         } while (!(toQuit.equals("yes") || toQuit.equals("y")));
 
-
-
-    }
-
-}
+            }
+                 

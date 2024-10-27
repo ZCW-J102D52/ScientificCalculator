@@ -36,4 +36,18 @@ public class Console {
         return userInput;
 
     }
+
+    public static Double Calculation (String operator, Double x, Double y) {
+        Core core = new Core();
+
+        switch (operator) {
+            case "exp":
+                return core.exp(x, y);
+            case "+":
+                return core.sum(x,y);
+            default:
+                System.out.println("Can not recognize operator. Try again!");
+                return null;
+        }
+    }
 }

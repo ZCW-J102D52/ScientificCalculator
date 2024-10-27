@@ -66,7 +66,11 @@ public class Core {
         return input1 = 1/input1;
     }
 
-    
+    //Kayan - Update the display to Err if an error occurs (eg: Division by zero)
+    public void updateDisplay(){
+        System.out.println("Err");
+    }
+
 
 }
 

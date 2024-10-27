@@ -10,4 +10,3 @@ public class TestMainApplication { scanner scanner = new scanner
 //switch case // if
 //operater says what method you call
 
-pu

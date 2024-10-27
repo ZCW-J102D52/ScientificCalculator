@@ -1,119 +1,13 @@
 package com.zipcodewilmington.scientificcalculator;
-
 import com.google.inject.internal.util.Strings;
-
 import javax.swing.*;
 import java.util.Scanner;
 import java.lang.Math;
-/**
- * Created by leon on 2/9/18.
- */
-
-//Enter a number from 1-4 according to the function you want the calculator to perform.
-//After that choose numbers to add, subtract, multiply, divide and then press 5 to exit.  .
-
-public class MainApplication {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("Welcome to Lycaena Calculator");
-            System.out.println("Select operation:");
-            System.out.println("1. Add");
-            System.out.println("2. Subtract");
-            System.out.println("3. Multiply");
-            System.out.println("4. Divide");
-            System.out.println("5. Degrees");
-            System.out.println("6. Radians");
-            System.out.println("7. Exit");
-
-            int choice = scanner.nextInt();
-            if (choice == 7) {
-                break;
-            }
-            System.out.println("Enter first number:");
-            double num1 = scanner.nextDouble();
-
-            System.out.println("Enter second number:");
-            double num2 = scanner.nextDouble();
-
-            switch (choice) {
-                case 1:
-//                    System.out.println("Enter second number:");
-//                    double num2 = scanner.nextDouble();
-                    System.out.println("Result: " + add(num1, num2));
-                    break;
-                case 2:
-                    System.out.println("Enter second number:");
-//                    double num2 = scanner.nextDouble();
-
-                    System.out.println("Result: " + subtract(num1, num2));
-                    break;
-                case 3:
-                    System.out.println("Enter second number:");
-//                    double num2 = scanner.nextDouble();
-
-                    System.out.println("Result: " + multiply(num1, num2));
-                    break;
-                case 4:
-                    System.out.println("Enter second number:");
-//                    double num2 = scanner.nextDouble();
-
-                    System.out.println("Result: " + divide(num1, num2));
-                    break;
-                case 5:
-                    double degrees = num1;
-                    System.out.println(Math.toRadians(degrees));
-                    break;
-
-                case 6:
-                    double radians = num1;
-                    System.out.println(Math.toDegrees(radians));
-                    break;
-
-                case 7:
-                    System.out.println("Invalid choice.");
-                    break;
-            }
-
-            System.out.println();
-        }
-        scanner.close();
-
-    }
-
-    public static double add(double a, double b) {
-        return a + b;
-    }
-    public static double subtract(double a, double b) {
-        return a - b;
-
-    }
-    public static double multiply(double a, double b) {
-        return a * b;
-
-    }
-    public static double divide(double a, double b) {
-        return a / b;
-    }
-
-    public static double degrees(double a, double b) {
-        double degrees = 0;
-        double radians;
-        return degrees;
-    }
-    public static double radians(double a, double b) {
-        double radians = 0;
-        double degrees;
-        return radians;
-
-    }
 
 
 
     //Switch trig units mode(Degrees, Radians):
-    {
+    /*{
         double radians = 0;
         double degrees = 0;
         degrees = radians * (degrees / Math.PI);
@@ -125,7 +19,7 @@ public class MainApplication {
 
         System.out.println(Math.toDegrees(radians));
         System.out.println(radians + " radians is " + degrees + " degrees.");
-        System.out.println();
+        System.out.println(); */
 
 
 //    public static class AngleConverter
@@ -159,15 +53,183 @@ public class MainApplication {
 //        }
 //
 
-//            Console.println("Welcome to my calculator!");
-//            String s = Console.getStringInput("Enter a string");
-//            Integer i = Console.getIntegerInput("Enter an integer");
-//            Double d = Console.getDoubleInput("Enter a double.");
-//
-//            Console.println("The user input %s as a string", s);
-//            Console.println("The user input %s as a integer", i);
-//            Console.println("The user input %s as a d", d);
+
+
+        System.out.println("*********************************************");
+        System.out.println("*                                           *");
+        System.out.println("*  Welcome to the Lycaena Tech Calculator!  *");
+        System.out.println("*                                           *");
+        System.out.println("*********************************************");
+        String toQuit = "n";
+        Double num1 = Console.getFirstDoubleInput("*              Enter a Number               *");
+        do {
+            System.out.println("*********************************************");
+            System.out.println("*  Type the name of the operation or symbol *");
+            System.out.println("*        You can even summon a Bunny        *");
+            System.out.println("* Enter 'oops' to enter a new first number  *");
+            System.out.println("*********************************************");
+            String operator = Console.getStringInput("*             Enter the Operation           *");
+            while (operator.equals("oops")) {
+                num1 = Console.getFirstDoubleInput("*             Enter a New Number             *");
+                operator = Console.getStringInput("*             Enter the Operation           *");
+            }
+
+            switch (operator) {
+                //Addition Sharmin
+                case "+":
+                case "add":
+                case "addition":
+                case "plus":
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + add(num1, num2));
+   
+                    public static double add(double a, double b) {
+                    return a + b;
+                       }
+                    break;
+                //Subtraction Sharmin
+                case "-":
+                case "sub":
+                case "subtraction":
+                case "minus":
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + subtract(num1, num2));
+                    
+                    public static double subtract(double a, double b) {
+                    return a - b;
+                      }    
+                    break;
+                //Multiplication Sharmin
+                case "x":
+                case "times":
+                case "multiply":
+                case "multiplication":
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + multiply(num1, num2));
+                
+                    public static double multiply(double a, double b) {
+                    return a * b;
+                      }
+                    break;
+                //Division Sharmin
+                case "/":
+                case "divide":
+                case "division":
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + divide(num1, num2));
+                    
+                    public static double divide(double a, double b) {
+                    return a / b;
+                      }
+                    break;
+                // Divide by zero error Ron
+                  try {
+
+                  } catch (ArithmeticException e) {
+                    System.out.println("You are not allowed to divide by zero.");
+                  } catch (Exception e) {
+                    System.out.println("Error: Please try again");
+                  } finally {
+                    System.out.println("Please continue");
+                  }
+                    System.out.println("dived");
+                    break;
+              //Radians to Degrees Sharmin  
+                case "radians to degrees":
+                case "rads to degs":
+                case "r to d":
+                    double degrees = num1;
+                    System.out.println(Math.toRadians(degrees));
+                
+                    public static double degrees(double a, double b) {
+                    double degrees = 0;
+                    double radians;
+                    return degrees;
+                      }
+                    break;
+              //Degrees to Radians Sharmin
+                case "degrees to radians":
+                case "degs to rads":
+                case "d to r":
+                    double radians = num1;
+                    System.out.println(Math.toDegrees(radians));
+                   
+                public static double radians(double a, double b) {
+                    double radians = 0;
+                    double degrees;
+                    return radians;
+                      }
+                  break;
+                //Square
+                case "square":
+                    System.out.println("squared");
+                    break;
+
+                //Bunny Enda
+                case "bunny":
+                    Console.getBunny();
+                    if (num1 <= 10) {
+                        for (int i = 0; i < num1; i++) {
+                            System.out.print("boing ");
+                        }
+                    } else if (num1 <= 100) {
+                        int bigCat = num1.intValue() / 10;
+                        for (int i = 0; i < bigCat; i++) {
+                            System.out.print("boing ");
+                        }
+                    } else if (num1 <= 1000) {
+                        int biggerCat = num1.intValue() / 100;
+                        for (int i = 0; i < biggerCat; i++) {
+                            System.out.print("boing ");
+                        }
+                    } else {
+                        System.out.print("That's a big bunny!");
+                    }
+
+            }
+            //Quit Enda
+            toQuit = Console.toQuit("All done?");
+            
+              //Offer Memory Enda
+            if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
+                String wantMem = Console.sendToMem("Want to send to Memory?");
+                if (wantMem.equals("y")) {
+                    System.out.println("Method to memory");
+                    //Memory function Ron  
+                    double memoryValue = 0.0;;
+                    public void setMPlus(double value) {
+                    memoryValue += value;
+                      }
+                  
+                    public double getMRC() {
+                    return memoryValue;
+                      }
+                
+                  public void getMC() {
+                    memoryValue = 0.0;
+                      }
+                }
+            }
+              //Reset and goodbye loop Enda
+            System.out.println("toQuit value at end of loop: "+toQuit);
+            if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
+                System.out.println("*********************************************");
+                num1 = Console.getFirstDoubleInput("*             Enter a New Number             *");
+            } else {
+                    System.out.println("*********************************************");
+                    System.out.println("*         Thank You for using the           *");
+                    System.out.println("*.        Lycaena Tech Calculator!          *");
+                    System.out.println("*********************************************");
+
+            }
+        } while (!(toQuit.equals("yes") || toQuit.equals("y")));
+
 
 
     }
+
 }

@@ -1,4 +1,58 @@
 package com.zipcodewilmington.scientificcalculator;
+import com.google.inject.internal.util.Strings;
+import javax.swing.*;
+import java.util.Scanner;
+import java.lang.Math;
+
+
+
+    //Switch trig units mode(Degrees, Radians):
+    /*{
+        double radians = 0;
+        double degrees = 0;
+        degrees = radians * (degrees / Math.PI);
+        radians = degrees * (Math.PI / 180);
+
+        System.out.println(Math.toRadians(degrees));
+        System.out.println(degrees + " degrees is " + radians + " radians.");
+        System.out.println();
+
+        System.out.println(Math.toDegrees(radians));
+        System.out.println(radians + " radians is " + degrees + " degrees.");
+        System.out.println(); */
+
+
+//    public static class AngleConverter
+//      public static degrees1();{
+//      AngleConverter angleInDegrees = new AngleConverter(45, "degrees");
+//      AngleConverter angleInRadians = new AngleConverter(Math.PI / 180, "radians");}
+//
+////    System.out.println("degrees to radians: " + angleInDegrees.toRadians());
+////    System.out.println("Radians to degrees: " + angleInRadians.toDegrees());
+//
+//        public AngleConverter(double v, String radians) {
+//        }
+//
+//        public static double toRadians(double degrees) {
+//           return Math.toRadians(degrees);
+//        }
+//
+//        public static <degrees> void toDegrees(double radians) {
+////           return Math.toDegrees(radians);
+//
+//            double num1 = 90;
+//            Double degrees1 = Console.getDoubleInput("Enter a double.");
+//            double radians1 = Math.toRadians(degrees1);
+//            System.out.println(degrees1 + " degrees is " + radians1 + " radians.");
+//            System.out.println();
+//
+//            double radians2 = Math.PI / 2;
+//            double degrees2 = Math.toDegrees(radians2);
+//            System.out.println(radians2 + " radians is " + degrees2 + " degrees.");
+//            System.out.println(num1);
+//        }
+//
+
 
 
         System.out.println("*********************************************");
@@ -21,31 +75,58 @@ package com.zipcodewilmington.scientificcalculator;
             }
 
             switch (operator) {
-                //Addition
+                //Addition Sharmin
                 case "+":
                 case "add":
                 case "addition":
                 case "plus":
-                    System.out.println("added");
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + add(num1, num2));
+   
+                    public static double add(double a, double b) {
+                    return a + b;
+                       }
                     break;
-                //Subtraction
+                //Subtraction Sharmin
                 case "-":
                 case "sub":
                 case "subtraction":
                 case "minus":
-                    System.out.println("subbed");
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + subtract(num1, num2));
+                    
+                    public static double subtract(double a, double b) {
+                    return a - b;
+                      }    
                     break;
-                //Multiplication
+                //Multiplication Sharmin
                 case "x":
                 case "times":
                 case "multiply":
                 case "multiplication":
-                    System.out.println("times");
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + multiply(num1, num2));
+                
+                    public static double multiply(double a, double b) {
+                    return a * b;
+                      }
                     break;
-                //Division
+                //Division Sharmin
                 case "/":
                 case "divide":
                 case "division":
+                    System.out.println("Enter second number:");
+                    double num2 = scanner.nextDouble();
+                    System.out.println("Result: " + divide(num1, num2));
+                    
+                    public static double divide(double a, double b) {
+                    return a / b;
+                      }
+                    break;
+                // Divide by zero error Ron
                   try {
 
                   } catch (ArithmeticException e) {
@@ -57,12 +138,38 @@ package com.zipcodewilmington.scientificcalculator;
                   }
                     System.out.println("dived");
                     break;
+              //Radians to Degrees Sharmin  
+                case "radians to degrees":
+                case "rads to degs":
+                case "r to d":
+                    double degrees = num1;
+                    System.out.println(Math.toRadians(degrees));
+                
+                    public static double degrees(double a, double b) {
+                    double degrees = 0;
+                    double radians;
+                    return degrees;
+                      }
+                    break;
+              //Degrees to Radians Sharmin
+                case "degrees to radians":
+                case "degs to rads":
+                case "d to r":
+                    double radians = num1;
+                    System.out.println(Math.toDegrees(radians));
+                   
+                public static double radians(double a, double b) {
+                    double radians = 0;
+                    double degrees;
+                    return radians;
+                      }
+                  break;
                 //Square
                 case "square":
                     System.out.println("squared");
                     break;
 
-                //Bunny
+                //Bunny Enda
                 case "bunny":
                     Console.getBunny();
                     if (num1 <= 10) {
@@ -84,28 +191,30 @@ package com.zipcodewilmington.scientificcalculator;
                     }
 
             }
+            //Quit Enda
             toQuit = Console.toQuit("All done?");
             
-              //Memory
+              //Offer Memory Enda
             if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
                 String wantMem = Console.sendToMem("Want to send to Memory?");
                 if (wantMem.equals("y")) {
                     System.out.println("Method to memory");
+                    //Memory function Ron  
                     double memoryValue = 0.0;;
-                public void setMPlus(double value) {
+                    public void setMPlus(double value) {
                     memoryValue += value;
-                }
-                public double getMRC() {
+                      }
+                  
+                    public double getMRC() {
                     return memoryValue;
-                }
-                public void getMC() {
+                      }
+                
+                  public void getMC() {
                     memoryValue = 0.0;
-                }
-                } else {
-
+                      }
                 }
             }
-
+              //Reset and goodbye loop Enda
             System.out.println("toQuit value at end of loop: "+toQuit);
             if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
                 System.out.println("*********************************************");
@@ -118,6 +227,7 @@ package com.zipcodewilmington.scientificcalculator;
 
             }
         } while (!(toQuit.equals("yes") || toQuit.equals("y")));
+
 
 
     }

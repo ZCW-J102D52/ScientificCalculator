@@ -1,7 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
-import com.google.inject.internal.util.Strings;
 import javax.swing.*;
-import java.util.Scanner;
 import java.lang.Math;
 
 
@@ -54,6 +52,11 @@ import java.lang.Math;
 //
 
 
+/**
+ * Created by leon on 2/9/18.
+ */
+public class MainApplication {
+    public static void main(String[] args) {
 
         System.out.println("*********************************************");
         System.out.println("*                                           *");
@@ -67,13 +70,17 @@ import java.lang.Math;
             System.out.println("*  Type the name of the operation or symbol *");
             System.out.println("*        You can even summon a Bunny        *");
             System.out.println("* Enter 'oops' to enter a new first number  *");
+            System.out.println("*     Enter 'view' to see all functions     *");
             System.out.println("*********************************************");
             String operator = Console.getStringInput("*             Enter the Operation           *");
             while (operator.equals("oops")) {
                 num1 = Console.getFirstDoubleInput("*             Enter a New Number             *");
                 operator = Console.getStringInput("*             Enter the Operation           *");
             }
-
+            while (operator.equals("view")) {
+                System.out.println("*  Add, Subtract, Multiply, Divide, Square   *");
+                System.out.println("*  Square Root, Sin, Cosin, Radians, Degrees  *");
+            }
             switch (operator) {
                 //Addition Sharmin
                 case "+":
@@ -83,7 +90,7 @@ import java.lang.Math;
                     System.out.println("Enter second number:");
                     double num2 = scanner.nextDouble();
                     System.out.println("Result: " + add(num1, num2));
-   
+
                     public static double add(double a, double b) {
                     return a + b;
                        }
@@ -96,10 +103,10 @@ import java.lang.Math;
                     System.out.println("Enter second number:");
                     double num2 = scanner.nextDouble();
                     System.out.println("Result: " + subtract(num1, num2));
-                    
+
                     public static double subtract(double a, double b) {
                     return a - b;
-                      }    
+                      }
                     break;
                 //Multiplication Sharmin
                 case "x":
@@ -109,7 +116,7 @@ import java.lang.Math;
                     System.out.println("Enter second number:");
                     double num2 = scanner.nextDouble();
                     System.out.println("Result: " + multiply(num1, num2));
-                
+
                     public static double multiply(double a, double b) {
                     return a * b;
                       }
@@ -121,7 +128,7 @@ import java.lang.Math;
                     System.out.println("Enter second number:");
                     double num2 = scanner.nextDouble();
                     System.out.println("Result: " + divide(num1, num2));
-                    
+
                     public static double divide(double a, double b) {
                     return a / b;
                       }
@@ -138,13 +145,13 @@ import java.lang.Math;
                   }
                     System.out.println("dived");
                     break;
-              //Radians to Degrees Sharmin  
+              //Radians to Degrees Sharmin
                 case "radians to degrees":
                 case "rads to degs":
                 case "r to d":
                     double degrees = num1;
                     System.out.println(Math.toRadians(degrees));
-                
+
                     public static double degrees(double a, double b) {
                     double degrees = 0;
                     double radians;
@@ -157,7 +164,7 @@ import java.lang.Math;
                 case "d to r":
                     double radians = num1;
                     System.out.println(Math.toDegrees(radians));
-                   
+
                 public static double radians(double a, double b) {
                     double radians = 0;
                     double degrees;
@@ -166,6 +173,7 @@ import java.lang.Math;
                   break;
                 //Square
                 case "square":
+
                     System.out.println("squared");
                     break;
 
@@ -199,20 +207,23 @@ import java.lang.Math;
                 String wantMem = Console.sendToMem("Want to send to Memory?");
                 if (wantMem.equals("y")) {
                     System.out.println("Method to memory");
-                    //Memory function Ron  
+
+                    //Memory function Ron
                     double memoryValue = 0.0;;
                     public void setMPlus(double value) {
                     memoryValue += value;
                       }
-                  
+
                     public double getMRC() {
                     return memoryValue;
                       }
-                
+
                   public void getMC() {
                     memoryValue = 0.0;
                       }
+
                 }
+
             }
               //Reset and goodbye loop Enda
             System.out.println("toQuit value at end of loop: "+toQuit);

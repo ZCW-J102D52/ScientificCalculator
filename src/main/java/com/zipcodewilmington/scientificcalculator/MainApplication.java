@@ -20,7 +20,8 @@ public class MainApplication {
                 Scanner scan = new Scanner(System.in);
                 System.out.print("Choose the option: \n");
                 System.out.print("1. InverseNumber \t2.Square \t3.Squareroot \t4.Exponent\t");
-                System.out.print("5. Invertsign \t6.Factorial");
+                System.out.print("5. Invertsign \t6.Factorial \t7.Log \t8.Anti Log10");
+                System.out.print("\t9. Anti Log");
                 int operator = scan.nextInt();
 
 
@@ -35,20 +36,23 @@ public class MainApplication {
                     case 2: {
 //                      //square
                         double square = square(acceptDoubleNum());
-                        System.out.println("Square of the given number is : " + square);
+                        System.out.println("Square of the given number is : ");
+                        System.out.printf("%.2f", square);
                         break;
                     }
                     case 3: {
                         //Square root
                         double root = squareRoot(acceptDoubleNum());
 
-                        System.out.println("SquareRoot of the given number is : " + root);
+                        System.out.println("SquareRoot of the given number is : ");
+                        System.out.printf("%.2f", root);
                         break;
                     }
                     case 4: {
 //                      //Exponentiation
                         double exponentiation = exponentiation(acceptDoubleNum());
-                        System.out.println("exponentiation of the given number is : " + exponentiation);
+                        System.out.println("exponentiation of the given number is : ");
+                        System.out.printf("%.2f", exponentiation);
                         break;
                     }
 
@@ -61,8 +65,30 @@ public class MainApplication {
                     }
 
                     case 6: {
-                        int fact = factorial(acceptIntNum());
-                        System.out.println("exponentiation of the given number is : " + fact);
+                        long fact = factorial(acceptIntNum());
+                        System.out.println("Factorial of the given number is : " + fact);
+                        break;
+                    }
+
+                    case 7: {
+                        double logValue = logFunction(acceptDoubleNum());
+                        System.out.println("Logarithm of the given number is : ");
+                        System.out.printf("%.2f", logValue);
+                        break;
+                    }
+
+                    case 8: {
+                        double log10Value = logFunction10(acceptDoubleNum());
+                        System.out.println("Logarithm of the given number is : ");
+                        System.out.printf("%.2f", log10Value);
+                        break;
+
+                    }
+
+                    case 9 : {
+                        double antiLog = antiLog(acceptDoubleNum());
+                        System.out.println("Inverse Logarithm of the given number is : ");
+                        System.out.printf("%.2f", antiLog);
                         break;
                     }
                     default:
@@ -93,14 +119,37 @@ public class MainApplication {
             }
 
             //Method to Calculate FactoriaL of a number
-            public static int factorial(int n1) {
-                int result = 1;
-                for (int i = 1; i <= n1; i++) {
+            public static long factorial(long n1) {
+                long result = 1L;
+                for (long i = 1; i <= n1; i++) {
                     result *= i;
                 }
                 return result;
 
             }
+
+
+//method for natural logarithm function
+    public static double logFunction(double n1){
+
+        double logvalue = Math.log(n1);
+        return logvalue;
+
+    }
+//method for inverse of logarithm function
+    public static double logFunction10(double n2) {
+        double log10result = Math.log10(n2);
+        return log10result;
+    }
+//method for inverse of natural logarithm function
+    public static double antiLog(double n1){
+        double y = Math.log(n1); // Calculate the natural log of x
+        double inverselog = Math.exp(y);
+//        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
+//        double inverselog = Math.pow(base, y);
+        return inverselog;
+
+    }
 
 
             // Methods to accept double input value
@@ -119,6 +168,8 @@ public class MainApplication {
                 scan.close();
                 return x;
             }
+
+
         }
 
 

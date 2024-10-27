@@ -12,7 +12,8 @@ import java.util.Scanner;
 
 
             System.out.println("Original Input value : " + y);
-            System.out.println("Inverse of input value: " + inverseNumF(y));
+            System.out.println("Inverse of input value: ");
+            System.out.printf("%.2f", inverseNumF(y));
             scan.close();
             return inverseNumF(y);
 

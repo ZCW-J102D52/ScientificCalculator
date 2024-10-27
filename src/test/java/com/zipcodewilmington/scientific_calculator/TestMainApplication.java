@@ -57,11 +57,30 @@ public class TestMainApplication {
     public void calculateInverse1() {
         InverseFunction Inverse = new InverseFunction();
         double result = Inverse.inverseNumF(4);
-        //assertEquals(4,result);
         assertEquals(0.25, result, 0.001);
 
     }
 
+    @Test
+    public void Logarithmicfunc() {
+        MainApplication mainApplication = new MainApplication();
+        double logresult = mainApplication.logFunction(10);
+        assertEquals(2.302585, logresult, 0.001);
+
+    }
+    @Test
+    public void Logarithmicfunc10() {
+        MainApplication mainApplication = new MainApplication();
+        double log10result = mainApplication.logFunction10(10);
+        assertEquals(1, log10result, 0.001);
+    }
+
+    @Test
+    public void inverseLogarithmicfunc() {
+        MainApplication mainApplication = new MainApplication();
+        double inverselogresult = mainApplication.antiLog(10);
+        assertEquals(10, inverselogresult, 0.001);
+    }
 }
 
 

@@ -38,3 +38,15 @@ public Double divide(input1){
 
 
 */
+
+
+
+
+case(operator == *){
+
+    getMultip
+
+        }
+
+
+

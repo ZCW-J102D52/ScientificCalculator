@@ -26,8 +26,8 @@ public class MainApplication {
               System.out.println("Your sum is");*/
         System.out.println(0);
         int Calculator= sc.nextInt();
-       {     int a = 1;
-               int b =1;
+       {     int a = 3;
+               int b =5;
             int getMultiply = 0;
             for (int i = 0; i < a; i++) {
                 getMultiply += b;

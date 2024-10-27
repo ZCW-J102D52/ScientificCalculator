@@ -12,6 +12,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestMainApplication {
 
+
     @Test
     public void testSquareRoot() {
 
@@ -81,6 +82,5 @@ public class TestMainApplication {
         double inverselogresult = mainApplication.antiLog(10);
         assertEquals(10, inverselogresult, 0.001);
     }
-}
 
 

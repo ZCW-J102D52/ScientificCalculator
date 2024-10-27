@@ -1,10 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
 
-/**
- * Created by leon on 2/9/18.
- */
-public class MainApplication {
-    public static void main(String[] args) {
 
         System.out.println("*********************************************");
         System.out.println("*                                           *");
@@ -51,6 +46,15 @@ public class MainApplication {
                 case "/":
                 case "divide":
                 case "division":
+                  try {
+
+                  } catch (ArithmeticException e) {
+                    System.out.println("You are not allowed to divide by zero.");
+                  } catch (Exception e) {
+                    System.out.println("Error: Please try again");
+                  } finally {
+                    System.out.println("Please continue");
+                  }
                     System.out.println("dived");
                     break;
                 //Square
@@ -81,11 +85,22 @@ public class MainApplication {
 
             }
             toQuit = Console.toQuit("All done?");
-
+            
+              //Memory
             if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
                 String wantMem = Console.sendToMem("Want to send to Memory?");
                 if (wantMem.equals("y")) {
                     System.out.println("Method to memory");
+                    double memoryValue = 0.0;;
+                public void setMPlus(double value) {
+                    memoryValue += value;
+                }
+                public double getMRC() {
+                    return memoryValue;
+                }
+                public void getMC() {
+                    memoryValue = 0.0;
+                }
                 } else {
 
                 }

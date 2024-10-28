@@ -1,4 +1,8 @@
 package com.zipcodewilmington.scientificcalculator;
+
+/**
+ * Created by leon on 2/9/18.
+ */
 import com.google.inject.internal.util.Strings;
 import javax.swing.*;
 import java.util.Scanner;
@@ -55,7 +59,7 @@ import java.lang.Math;
 
 
 public class MainApplication {
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
         System.out.println("*********************************************");
         System.out.println("*                                           *");
@@ -270,9 +274,63 @@ public class MainApplication {
               //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
               //        double inverselog = Math.pow(base, y);
                         return inverselog; }
-
-                        break;
-                        
+                          break;                        
+                //Sine Al
+                case "sine":
+                case "sin":
+                        System.out.print("Enter the angle in Degrees:\n");
+                        double angleInDegrees = scan.nextInt();
+                        double angleInRadians = Math.toRadians(angleInDegrees);
+                        double sineValue = Math.sin(angleInRadians);
+                        System.out.println("Sine of the given number is : " + sineValue);
+                          break;
+                //Cosine Al
+                case "cosine":
+                case "co sine":
+                case "cosin":
+                        System.out.print("Enter the angle in Degrees:\n");
+                        double angleInDegrees = scan.nextInt();
+                        double angleInRadians = Math.toRadians(angleInDegrees);
+                        double cosValue = Math.cos(angleInRadians);
+                        System.out.println("Cosine of the given number is : " + cosValue);
+                          break;
+                //Tangent Al
+                case "tangent":
+                case "tan":
+                        System.out.print("Enter the angle in Degrees:\n");
+                        double angleInDegrees = scan.nextInt();
+                        double angleInRadians = Math.toRadians(angleInDegrees);
+                        double tanValue = Math.tan(angleInRadians);
+                        System.out.print("Tangent of the given number is : " + tanValue);
+                          break;
+                //Inverse Sine Al
+                case "inverse sine":
+                case "inverse sin":
+                        System.out.print("Enter a value between -1 and 1:\n");
+                        double sine = scan.nextDouble();
+                        double inverseSineRadians = Math.asin(sine);
+                        double inverseSineDegrees = Math.toDegrees(inverseSineRadians);
+                        System.out.println("Inverse Sine of the given number is : " + inverseSineDegrees + " degrees");
+                          break;
+                //Inverse Cosine Al
+                case "inverse cosine":
+                case "inverse co sine":
+                case "inverse cosin":
+                        System.out.print("Enter a value between -1 and 1:\n");
+                        double cos = scan.nextDouble();
+                        double inverseCosRadians = Math.acos(cos);
+                        double inverseCosDegrees = Math.toDegrees(inverseCosRadians);
+                        System.out.println("Inverse Cosine of the given number is : " + inverseCosDegrees + " degrees");
+                          break;
+                //Inverse Tangent Al
+                case "inverse tangent":
+                case "inverse tan":
+                        System.out.print("Enter a value between -1 and 1:\n");
+                        double tan = scan.nextDouble();
+                        double inverseTanRadians = Math.atan(tan);
+                        double inverseTanDegrees = Math.toDegrees(inverseTanRadians);
+                        System.out.println("Inverse Tan of the given number is : " + inverseTanDegrees + " degrees");
+                          break;                               
                 //Bunny Enda
                 case "bunny":
                     Console.getBunny();

@@ -15,9 +15,17 @@ public class Console {
         print(output + "\n", args);
     }
 
-    public static String getStringInput(String prompt) {
+    public static int getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
+        return scanner.nextInt();
+    }
+  
+    public static Double getDoubleInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        return scanner.nextDouble();
+
         String operator = scanner.nextLine().toLowerCase();
         return operator;
     }
@@ -34,6 +42,7 @@ public class Console {
         println(prompt);
         Integer num2 = scanner.nextInt();
         return num2;
+
     }
 
     public static Double getFirstDoubleInput(String prompt) {

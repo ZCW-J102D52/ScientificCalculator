@@ -73,6 +73,45 @@ public class Scientific {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Kayan -
+       Switch trig units mode (Degrees, Radians)
+       switchUnitsMode() should rotate through the options
+       switchUnitsMode(String mode) should set the trig units to the type given
+        */
+    public static String  trigUnitsMode;
+
+    public static String switchUnitsMode(){
+        if(trigUnitsMode.equals("Degrees")) return "Degrees";
+        else return "Radians";
+    }
+
+    public static void switchUnitsMode(String mode){
+        trigUnitsMode = mode;
+    }
+    //converts Radians to Degrees
+    public static double convertRadiansToDegrees(double input1) {
+        return Math.toDegrees(input1);
+    }
+
+    // Converts Degrees to Radians
+    public static double convertDegreesToRadians(double input1) {
+        return Math.toRadians(input1);
+    }
 }
 
 

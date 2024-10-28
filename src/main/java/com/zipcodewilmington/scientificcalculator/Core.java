@@ -111,7 +111,19 @@ public class Core {
     }
 
     //Kayan - Update the display to Err if an error occurs (eg: Division by zero)
-    public void updateDisplay() {
+    public static void updateDisplay() {
         System.out.println("Err");
+    }
+
+    //Added a private attribute named errorOccurred
+    private boolean errorOccurred;
+
+    //In the Constructor need to set errorOccurred initially to false
+    public Core(){ this.errorOccurred = false;}
+
+    //Errors must be cleared before any other operation can take place
+    public void clearErrorOnDisplay() {
+        System.out.println("Clearing error...");
+        errorOccurred = false;
     }
 }

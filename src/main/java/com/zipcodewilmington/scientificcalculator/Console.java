@@ -101,7 +101,9 @@ public class Console {
             case "factorial":
             case "!":
                 return scientific.factorial(x);
-
+            case "%":
+            case "percentage":
+                return core.percentage(x , y);
             default:
                 System.out.println("Can not recognize operator. Try again!");
                 return null;

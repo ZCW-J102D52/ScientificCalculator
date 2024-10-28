@@ -126,4 +126,11 @@ public class Core {
         System.out.println("Clearing error...");
         errorOccurred = false;
     }
+
+    public Double percentage(double input1 ,double input2){
+        Double result = (input1 / input2) * 100;
+        return result;
+
+    }
 }
+

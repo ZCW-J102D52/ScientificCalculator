@@ -54,6 +54,8 @@ import java.lang.Math;
 //
 
 
+public class MainApplication {
+    public static void main(String[]args){
 
         System.out.println("*********************************************");
         System.out.println("*                                           *");
@@ -223,10 +225,10 @@ import java.lang.Math;
                       System.out.println("Factorial of the given number is : " + fact);
                         
                       public static long factorial(long n1) {
-                      long result = 1L;
-                      for (long i = 1; i <= n1; i++) {
-                      result *= i;
-                      return result;
+                        long result = 1L;
+                            for (long i = 1; i <= n1; i++) {result *= i;
+                            return result;
+                            }
                         }
                        break;
                 //Log Value Deepti
@@ -267,7 +269,7 @@ import java.lang.Math;
                         double inverselog = Math.exp(y);
               //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
               //        double inverselog = Math.pow(base, y);
-                        return inverselog;
+                        return inverselog; }
 
                         break;
                         

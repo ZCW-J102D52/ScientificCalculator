@@ -76,8 +76,10 @@ public class Console {
             case "C":
                 return core.ChangeNumber(x, y);
             case "sin":
+            case "sine":
                 return scientific.sine(x);
             case "cosine":
+            case "cos":
                 return scientific.cosine(x);
             case "tan":
                 return scientific.tangent(x);
@@ -102,6 +104,7 @@ public class Console {
             case "!":
                 return scientific.factorial(x);
             case "%":
+            case "percent":
             case "percentage":
                 return core.percentage(x , y);
             default:

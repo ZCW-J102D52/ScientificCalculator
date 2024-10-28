@@ -37,14 +37,58 @@ public class Console {
 
     }
 
-    public static Double Calculation (String operator, Double x, Double y) {
+    public static Double getChange() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("C - Change number"); //user has to press C in order to change number
+        Double input1 = scanner.nextDouble(); // allows the user to enter a new number
+        return input1;
+    }
+
+    public static Double Calculation (String operator, double x, double y) {
         Core core = new Core();
+        Scientific scientific = new Scientific();
+
 
         switch (operator) {
-            case "exp":
-                return core.exp(x, y);
+            case "C":
+                return core.ChangeNumber(x, y);
+            case "-":
+                return core.subtract(x, y);
             case "+":
-                return core.sum(x,y);
+                return core.sum(x, y);
+
+            case "*":
+                return core.multiply(x, y);
+
+            case "/":
+                return core.divide(x, y);
+
+            case "exp":
+            case "^":
+                return core.exp(x, y);
+            //case "+":
+            //return core.sum(x,y);
+            case "square":
+                return core.square(x);
+            case "squareroot":
+                return core.squareRoot(x);
+
+            case "sin":
+                return scientific.sine(x);
+            case "cosine":
+                return scientific.cosine(x);
+
+
+            case "log":
+                return scientific.logValue(x, y);
+            case "inverselog":
+                return scientific.inverseLog(x);
+            case "naturallog":
+                return scientific.naturalLog(x);
+            case "inversenaturallog":
+                return scientific.inverseNatLog(x);
+
+
             default:
                 System.out.println("Can not recognize operator. Try again!");
                 return null;

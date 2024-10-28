@@ -14,20 +14,16 @@ public class Core {
             break;
         case 'multiply '
 
-
-
-
-
             int input1 = 0;
     int input2 = 0;
     */
 
-    public double square(int input1) {
+    public double square(double input1) {
         double pow = Math.pow(input1, 2);
         return pow;
     }
 
-    public double squareRoot(int input1) {
+    public double squareRoot(double input1) {
         double sqrt = Math.sqrt(input1);
         return sqrt;
     }
@@ -39,14 +35,14 @@ public class Core {
 
 
     //add method
-    public double sum(double input1, double input2) {
+   /* public double sum(double input1, double input2) {
         //Double sumValue = Console.getDoubleInput("Enter the value you want to sum.");
 
         return input1 + input2;
     }
 
     //Subtraction
-    public Double subtract(double input1) {
+    public Double subtract(double input1, double inout2) {
         Double subtractValue = Console.getDoubleInput("Enter the value you want to subtract.");
 
         return input1 - subtractValue;
@@ -67,8 +63,43 @@ public class Core {
 
         return input1 / divideValue;
 
+    }*/
+
+    //Gabi
+    //change number
+    public double ChangeNumber(double input1,double input2) {
+        //Double sumValue = Console.getDoubleInput("Enter the value you want to sum.");
+
+        return input1 = input2;
     }
 
+    // add method
+    public double sum(double input1,double input2) {
+        //Double sumValue = Console.getDoubleInput("Enter the value you want to sum.");
+
+        return input1 + input2;
+    }
+
+    //Subtraction
+    public Double subtract(double input1,double input2) {
+
+        return input1 - input2;
+
+    }
+
+    //Multiplication
+    public Double multiply(double input1,double input2) {
+
+        return input1 * input2;
+
+    }
+
+    //Division
+    public Double divide(double input1,double input2 ) {
+
+        return input1 / input2;
+
+    }
 
     //Maisha
     public double invertSign(double input1) {
@@ -84,11 +115,3 @@ public class Core {
         System.out.println("Err");
     }
 }
-
-
-
-
-
-
-
-

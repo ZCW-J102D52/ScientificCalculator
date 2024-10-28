@@ -17,8 +17,9 @@ public class MainApplication {
         Double firstInt = Console.getDoubleInput("Enter command");
         String operator = Console.getStringInput("Enter operator");
         Double secondInt = Console.getDoubleInput("Enter next command");
+        //Double ChangeNumber = Console.getChange();
 
-        System.out.println( firstInt + operator + secondInt + "=" + Console.Calculation(operator, firstInt, secondInt));
+        System.out.println( firstInt + operator + secondInt +  "=" + Console.Calculation(operator, firstInt, secondInt));
 
 
     }

@@ -86,63 +86,48 @@ public class MainApplication {
                 case "add":
                 case "addition":
                 case "plus":
-                    System.out.println("Enter second number:");
-                    double num2 = scanner.nextDouble();
-                    System.out.println("Result: " + add(num1, num2));
-   
-                    public static double add(double a, double b) {
-                    return a + b;
-                       }
-                    break;
+                 //   double num2 = Console.getSecondDoubleInput("Enter Second number:");
+                    //System.out.println("Result: " + add(num1, num2));
+                    //num1 += num2;
+                    //return num1;
+                    //public double add(double a, double b) {
+                    //return a + b;
+
+                      // }
+                  break;
                 //Subtraction Sharmin
                 case "-":
                 case "sub":
                 case "subtraction":
                 case "minus":
-                    System.out.println("Enter second number:");
-                    double num2 = scanner.nextDouble();
-                    System.out.println("Result: " + subtract(num1, num2));
-                    
-                    public static double subtract(double a, double b) {
-                    return a - b;
-                      }    
+                    double num2 = Console.getSecondDoubleInput("Enter second number");
+                    System.out.println("Result: " + Opera.subtract(num1, num2));
                     break;
-                //Multiplication Sharmin
-                case "x":
+               //Multiplication Sharmin
+               case "x":
                 case "times":
                 case "multiply":
                 case "multiplication":
-                    System.out.println("Enter second number:");
-                    double num2 = scanner.nextDouble();
-                    System.out.println("Result: " + multiply(num1, num2));
-                
-                    public static double multiply(double a, double b) {
-                    return a * b;
-                      }
+                  double secondMulti = Console.getSecondDoubleInput("Enter second number");
+                    System.out.println("Result: " + Opera.multiply(num1, secondMulti));
                     break;
                 //Division Sharmin
                 case "/":
                 case "divide":
                 case "division":
-                    System.out.println("Enter second number:");
-                    double num2 = scanner.nextDouble();
-                    System.out.println("Result: " + divide(num1, num2));
-                    
-                    public static double divide(double a, double b) {
-                    return a / b;
-                      }
+                    double divid2 = Console.getSecondDoubleInput("Enter second number");
+                    System.out.println("Result: " + Opera.divide(num1, divid2));
                     break;
                 // Divide by zero error Ron
-                  try {
+                 try {
 
                   } catch (ArithmeticException e) {
                     System.out.println("You are not allowed to divide by zero.");
                   } catch (Exception e) {
                     System.out.println("Error: Please try again");
                   } finally {
-                    System.out.println("Please continue");
+                      System.out.println("Please continue");
                   }
-                    System.out.println("dived");
                     break;
               //Radians to Degrees Sharmin  
                 case "radians to degrees":
@@ -150,28 +135,14 @@ public class MainApplication {
                 case "r to d":
                     double degrees = num1;
                     System.out.println(Math.toRadians(degrees));
-                
-                    public static double degrees(double a, double b) {
-                    double degrees = 0;
-                    double radians;
-                    return degrees;
-                      }
                     break;
-                
               //Degrees to Radians Sharmin
                 case "degrees to radians":
                 case "degs to rads":
                 case "d to r":
                     double radians = num1;
                     System.out.println(Math.toDegrees(radians));
-                   
-                public static double radians(double a, double b) {
-                    double radians = 0;
-                    double degrees;
-                    return radians;
-                      }
                     break;
-                
                 //Inverse number Deepti
                 case "inverse number":
                 case "inverse num":
@@ -190,24 +161,13 @@ public class MainApplication {
                       double square = square(acceptDoubleNum());
                       System.out.println("Square of the given number is : ");
                       System.out.printf("%.2f", square);
-                      
-                      public static double square(double x2) {
-                      double square = Math.pow(x2, 2);
-                      return square;
-                        }
                       break;
-                
               //Square Root Deepti
                 case "square root":
                 case "sq rt":
                       double root = squareRoot(acceptDoubleNum());
                       System.out.println("SquareRoot of the given number is : ");
                       System.out.printf("%.2f", root);
-                
-                      public static double squareRoot(double x1) {
-                      double result = Math.sqrt(x1);
-                      return result;
-                         }
                       break;
                 //Exponential Deepti
                 case "exponential":
@@ -216,24 +176,12 @@ public class MainApplication {
                       double exponentiation = exponentiation(acceptDoubleNum());
                       System.out.println("exponentiation of the given number is : ");
                       System.out.printf("%.2f", exponentiation);
-                        
-                      public static double exponentiation(double x3) {
-                      double exponent = Math.exp(x3);
-                      return exponent;
-                        }
                       break;
                 //Factorial Deepti
                 case "factorial":
                 case "fact":
                       long fact = factorial(acceptIntNum());
                       System.out.println("Factorial of the given number is : " + fact);
-                        
-                      public static long factorial(long n1) {
-                        long result = 1L;
-                            for (long i = 1; i <= n1; i++) {result *= i;
-                            return result;
-                            }
-                        }
                        break;
                 //Log Value Deepti
                 case "log value":
@@ -241,24 +189,14 @@ public class MainApplication {
                       double logValue = logFunction(acceptDoubleNum());
                       System.out.println("Logarithm of the given number is : ");
                       System.out.printf("%.2f", logValue);
-                        
-                      public static double logFunction(double n1){
-                      double logvalue = Math.log(n1);
-                      return logvalue;
-                        }
-                       break;
+                      break;
                 //Log Function Deepti
                 case "log function":
                 case "log func":
                         double log10Value = logFunction10(acceptDoubleNum());
                         System.out.println("Logarithm of the given number is : ");
                         System.out.printf("%.2f", log10Value);
-                        
-                        public static double logFunction10(double n2) {
-                        double log10result = Math.log10(n2);
-                        return log10result;
-                          }
-                         break;
+                        break;
                  //Anti Log Deepti
                  case "anti log":
                  case "anti logarithm":
@@ -267,15 +205,8 @@ public class MainApplication {
                         double antiLog = antiLog(acceptDoubleNum());
                         System.out.println("Inverse Logarithm of the given number is : ");
                         System.out.printf("%.2f", antiLog);
-                        
-                        public static double antiLog(double n1){
-                        double y = Math.log(n1); // Calculate the natural log of x
-                        double inverselog = Math.exp(y);
-              //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
-              //        double inverselog = Math.pow(base, y);
-                        return inverselog; }
                           break;                        
-                //Sine Al
+             */   //Sine Al
                 case "sine":
                 case "sin":
                         System.out.print("Enter the angle in Degrees:\n");
@@ -330,7 +261,7 @@ public class MainApplication {
                         double inverseTanRadians = Math.atan(tan);
                         double inverseTanDegrees = Math.toDegrees(inverseTanRadians);
                         System.out.println("Inverse Tan of the given number is : " + inverseTanDegrees + " degrees");
-                          break;                               
+                         break;
                 //Bunny Enda
                 case "bunny":
                     Console.getBunny();
@@ -353,8 +284,30 @@ public class MainApplication {
                     }
 
             }
-          
-          // Methods to accept double input value Deepti
+
+/*
+      //////////////////////////////   METHODS - SHARMIN  ///////////////////////////////////////
+            //Subtraction Method
+            public static double subtract(double a, double b) {
+                return a - b; }
+            //Multiplication Method
+                public static double multiply(double a, double b) {
+                    return a * b; }
+            //Division Method
+            public static double divide(double a, double b) {
+                return a / b;}
+            //Radians to Degrees
+            public static double degrees(double a, double b) {
+                double degrees = 0;
+                double radians;
+                return degrees;}
+            //Degrees to Radians
+            public static double radians(double a, double b) {
+                double radians = 0;
+                double degrees;
+                return radians;}
+     ///////////////////////////////   METHODS DEEPTI   ///////////////////////////////////////////
+            // Methods to accept double input value
             public static double acceptDoubleNum() {
                 Scanner scan = new Scanner(System.in);
                 System.out.print("Enter any number: ");
@@ -362,15 +315,50 @@ public class MainApplication {
                 scan.close();
                 return x;
             }
-            // Methods to accept int input value Deepti
+            // Methods to accept int input value
             public static int acceptIntNum() {
                 Scanner scan = new Scanner(System.in);
                 System.out.print("Enter any number: ");
                 int x = scan.nextInt();
                 scan.close();
-                return x;
+                return x;}
+            // Square
+            public static double square(double x2) {
+                double square = Math.pow(x2, 2);
+                return square;}
+           //Square Root
+            public static double squareRoot(double x1) {
+                double result = Math.sqrt(x1);
+                return result;}
+            //Exponential
+            public static double exponentiation(double x3) {
+                double exponent = Math.exp(x3);
+                return exponent;}
+            //Factorial
+            public static long factorial(long n1) {
+                long result = 1L;
+                for (long i = 1; i <= n1; i++) {result *= i;
+                    return result;
+                }
             }
-            //Quit Enda
+            //Log Value
+            public static double logFunction(double n1){
+                double logvalue = Math.log(n1);
+                return logvalue;}
+            //Log Function
+            public static double logFunction10(double n2) {
+                double log10result = Math.log10(n2);
+                return log10result;}
+            //Anti Log
+            public static double antiLog(double n1){
+                double y = Math.log(n1); // Calculate the natural log of x
+                double inverselog = Math.exp(y);
+                //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
+                //        double inverselog = Math.pow(base, y);
+                return inverselog; }
+            //
+     //////////////////////////////////////////////////////////////////////////////////////////////
+            //Quit Enda */
             toQuit = Console.toQuit("All done?");
             
               //Offer Memory Enda
@@ -380,10 +368,10 @@ public class MainApplication {
                     System.out.println("Method to memory");
                     //Memory function Ron  
                     double memoryValue = 0.0;;
-                    public void setMPlus(double value) {
+                    public void setMPlus(double value;) {
                     memoryValue += value;
                       }
-                  
+
                     public double getMRC() {
                     return memoryValue;
                       }
@@ -407,5 +395,5 @@ public class MainApplication {
             }
         } while (!(toQuit.equals("yes") || toQuit.equals("y")));
 
-            }
+            }}
                  

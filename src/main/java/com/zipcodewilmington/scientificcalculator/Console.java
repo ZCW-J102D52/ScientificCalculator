@@ -24,8 +24,11 @@ public class Console {
     public static Double getDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        return scanner.nextDouble();
+        return scanner.nextDouble(); }
 
+        public static String getStringInput(String prompt) {
+            Scanner scanner = new Scanner(System.in);
+            println(prompt);
         String operator = scanner.nextLine().toLowerCase();
         return operator;
     }
@@ -48,8 +51,7 @@ public class Console {
     public static Double getFirstDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        Double num1 = scanner.nextDouble();
-        return num1;
+        return scanner.nextDouble();
     }
 
     public static Double getSecondDoubleInput(String prompt) {
@@ -83,13 +85,6 @@ public class Console {
         println("toquit value: "+toQuit);
         return toQuit;
     }
-
-// I am trying something new. let's see if this vanishes.
-
-
-
-
-
 
 
 

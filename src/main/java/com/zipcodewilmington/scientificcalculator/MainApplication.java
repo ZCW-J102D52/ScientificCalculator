@@ -152,20 +152,20 @@ public class MainApplication {
                 //Invert sign Deepti
                 case "invert sign":
                 case "inv sign":
-                      InverseFunction inverse = new InverseFunction();
-                      inverse.calculateInvertSign();
+                      InverseFunction inverse1 = new InverseFunction();
+                      inverse1.calculateInvertSign();
                       break;
                 //Square Deepti
                 case "square":
                 case "sq":
-                      double square = square(acceptDoubleNum());
+                      double square = Opera.square(Opera.acceptDoubleNum());
                       System.out.println("Square of the given number is : ");
                       System.out.printf("%.2f", square);
                       break;
               //Square Root Deepti
                 case "square root":
                 case "sq rt":
-                      double root = squareRoot(acceptDoubleNum());
+                      double root = Opera.squareRoot(Opera.acceptDoubleNum());
                       System.out.println("SquareRoot of the given number is : ");
                       System.out.printf("%.2f", root);
                       break;
@@ -173,27 +173,29 @@ public class MainApplication {
                 case "exponential":
                 case "expo":
                 case "exponent":
-                      double exponentiation = exponentiation(acceptDoubleNum());
-                      System.out.println("exponentiation of the given number is : ");
-                      System.out.printf("%.2f", exponentiation);
-                      break;
+
+                    //Exponentiation
+                    double [] input = Opera.acceptArrayInput();
+                    double exponentiation = Opera.exponentiation(input[0],input[1]);
+                    System.out.println("exponentiation of the given number is : " + exponentiation);
+                    break;
                 //Factorial Deepti
                 case "factorial":
                 case "fact":
-                      long fact = factorial(acceptIntNum());
+                      long fact = Opera.factorial(Opera.acceptIntNum());
                       System.out.println("Factorial of the given number is : " + fact);
                        break;
                 //Log Value Deepti
                 case "log value":
                 case "log val":
-                      double logValue = logFunction(acceptDoubleNum());
+                      double logValue = Opera.logFunction(Opera.acceptDoubleNum());
                       System.out.println("Logarithm of the given number is : ");
                       System.out.printf("%.2f", logValue);
                       break;
                 //Log Function Deepti
                 case "log function":
                 case "log func":
-                        double log10Value = logFunction10(acceptDoubleNum());
+                        double log10Value = Opera.logFunction10(Opera.accepLongNum());
                         System.out.println("Logarithm of the given number is : ");
                         System.out.printf("%.2f", log10Value);
                         break;
@@ -202,11 +204,11 @@ public class MainApplication {
                  case "anti logarithm":
                  case "inverse logarithm":
                  case "inverse log":
-                        double antiLog = antiLog(acceptDoubleNum());
+                        double antiLog = Opera.antiLog(Opera.acceptDoubleNum());
                         System.out.println("Inverse Logarithm of the given number is : ");
                         System.out.printf("%.2f", antiLog);
                           break;                        
-             */   //Sine Al
+                //Sine Al
                 case "sine":
                 case "sin":
                         System.out.print("Enter the angle in Degrees:\n");

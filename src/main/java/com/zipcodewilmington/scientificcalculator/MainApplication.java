@@ -156,59 +156,82 @@ public class MainApplication {
                 //Sine Al
                 case "sine":
                 case "sin":
-                        System.out.print("Enter the angle in Degrees:\n");
-                        double angleInDegrees = scan.nextInt();
-                        double angleInRadians = Math.toRadians(angleInDegrees);
-                        double sineValue = Math.sin(angleInRadians);
-                        System.out.println("Sine of the given number is : " + sineValue);
-                          break;
+                        double sinValue = Opera.sin(Opera.acceptIntNum());
+                        System.out.println("Sine of the given number is :" + sinValue + " radians.");
+                        break;
+                        //code below is what I had before making sin into a method
+//                        System.out.print("Enter the angle in Degrees:\n");
+//                        double angleInDegrees = Opera.acceptIntNum();
+//                        double angleInRadians = Math.toRadians(angleInDegrees);
+//                        double sineValue = Math.sin(angleInRadians);
+//                        System.out.println("Sine of the given number is : " + sineValue);
+//                        break;
                 //Cosine Al
                 case "cosine":
                 case "co sine":
                 case "cosin":
-                        System.out.print("Enter the angle in Degrees:\n");
-                        double angleInDegrees = scan.nextInt();
-                        double angleInRadians = Math.toRadians(angleInDegrees);
-                        double cosValue = Math.cos(angleInRadians);
-                        System.out.println("Cosine of the given number is : " + cosValue);
-                          break;
+                    double cosValue = Opera.cos(Opera.acceptIntNum());
+                    System.out.println("Cosine of the given number is :" + cosValue + " radians.");
+                    break;
+                    //What I had before making a method
+//                        System.out.print("Enter the angle in Degrees:\n");
+//                        double angleInDegreesCos = Opera.acceptIntNum();
+//                        double angleInRadiansCos = Math.toRadians(angleInDegreesCos);
+//                        double cosValue = Math.cos(angleInRadiansCos);
+//                        System.out.println("Cosine of the given number is : " + cosValue);
+//                          break;
                 //Tangent Al
                 case "tangent":
                 case "tan":
-                        System.out.print("Enter the angle in Degrees:\n");
-                        double angleInDegrees = scan.nextInt();
-                        double angleInRadians = Math.toRadians(angleInDegrees);
-                        double tanValue = Math.tan(angleInRadians);
-                        System.out.print("Tangent of the given number is : " + tanValue);
-                          break;
+                    double tanValue = Opera.tan(Opera.acceptIntNum());
+                    System.out.println("Tangent of the given number is :" + tanValue + " radians.");
+                    break;
+//                        System.out.print("Enter the angle in Degrees:\n");
+//                        double angleInDegreesTan = Opera.acceptIntNum();
+//                        double angleInRadiansTan = Math.toRadians(angleInDegreesTan);
+//                        double tanValue = Math.tan(angleInRadiansTan);
+//                        System.out.print("Tangent of the given number is : " + tanValue);
+//                          break;
                 //Inverse Sine Al
                 case "inverse sine":
                 case "inverse sin":
-                        System.out.print("Enter a value between -1 and 1:\n");
-                        double sine = scan.nextDouble();
-                        double inverseSineRadians = Math.asin(sine);
-                        double inverseSineDegrees = Math.toDegrees(inverseSineRadians);
-                        System.out.println("Inverse Sine of the given number is : " + inverseSineDegrees + " degrees");
-                          break;
+                    int invSinValue = Opera.invSin(Opera.acceptIntNum());
+                    System.out.println("Inverse sine of the given value is :" + invSinValue + " degrees.");
+                    break;
+                    //what I had before making method
+//                        System.out.print("Enter a value between -1 and 1:\n");
+//                        double sine = Opera.acceptDoubleNum();
+//                        double inverseSineRadians = Math.asin(sine);
+//                        double inverseSineDegrees = Math.toDegrees(inverseSineRadians);
+//                        System.out.println("Inverse Sine of the given number is : " + inverseSineDegrees + " degrees");
+//                        break;
                 //Inverse Cosine Al
                 case "inverse cosine":
                 case "inverse co sine":
                 case "inverse cosin":
-                        System.out.print("Enter a value between -1 and 1:\n");
-                        double cos = scan.nextDouble();
-                        double inverseCosRadians = Math.acos(cos);
-                        double inverseCosDegrees = Math.toDegrees(inverseCosRadians);
-                        System.out.println("Inverse Cosine of the given number is : " + inverseCosDegrees + " degrees");
-                          break;
+                    int invCosValue = Opera.invCos(Opera.acceptIntNum());
+                    System.out.println("Inverse Cosine of the given value is :" + invCosValue + " degrees.");
+                    break;
+                        //what I had before making method
+//                        System.out.print("Enter a value between -1 and 1:\n");
+//                        double cos = Opera.acceptDoubleNum();
+//                        double inverseCosRadians = Math.acos(cos);
+//                        double inverseCosDegrees = Math.toDegrees(inverseCosRadians);
+//                        System.out.println("Inverse Cosine of the given number is : " + inverseCosDegrees + " degrees");
+//                          break;
                 //Inverse Tangent Al
                 case "inverse tangent":
                 case "inverse tan":
-                        System.out.print("Enter a value between -1 and 1:\n");
-                        double tan = scan.nextDouble();
-                        double inverseTanRadians = Math.atan(tan);
-                        double inverseTanDegrees = Math.toDegrees(inverseTanRadians);
-                        System.out.println("Inverse Tan of the given number is : " + inverseTanDegrees + " degrees");
-                         break;
+                    int invTanValue = Opera.invTan(Opera.acceptIntNum());
+                    System.out.println("Inverse Tangent of the given value is :" + invTanValue + " degrees.");
+                    break;
+                    //what I had before methods
+//                        System.out.print("Enter a value between -1 and 1:\n");
+//                        double tan = Opera.acceptDoubleNum();
+//                        double inverseTanRadians = Math.atan(tan);
+//                        double inverseTanDegrees = Math.toDegrees(inverseTanRadians);
+//                        System.out.println("Inverse Tan of the given number is : " + inverseTanDegrees + " degrees");
+//                         break;
                 //Bunny Enda
                 case "bunny":
                     Console.getBunny();

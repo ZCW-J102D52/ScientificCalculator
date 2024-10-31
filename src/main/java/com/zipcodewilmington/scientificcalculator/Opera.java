@@ -62,83 +62,68 @@ public class Opera{
     public static long factorial(long n1) {
         long result = 1L;
         for (long i = 1; i <= n1; i++) {
+            result *= i;
+        }
+        return result;
+    }
+        //Log Value
+        public static double logFunction ( double n1){
+            double logvalue = Math.log(n1);
+            return logvalue;
+        }
+        //Log Function
+        public static double logFunction10 ( double n2){
+            double log10result = Math.log10(n2);
+            return log10result;
+        }
+        //Anti Log
+        public static double antiLog ( double n1){
+            double y = Math.log(n1); // Calculate the natural log of x
+            double inverselog = Math.exp(y);
+            //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
+            //        double inverselog = Math.pow(base, y);
+            return inverselog;
+        }
+
+        //Sine
+        public static double sin(int deg){
+            double sineValue = Math.sin(Math.toRadians(deg));
+            return sineValue;
+        }
+        //Cosine
+        public static double cos(int deg){
+            double cosValue = Math.cos(Math.toRadians(deg));
+            return cosValue;
+        }
+        //Tangent
+        public static double tan(int deg){
+            double tanValue = Math.tan(Math.toRadians(deg));
+            return tanValue;
+
             result = result * i;
         }
         return result;
     }
 
-    //Log Value
-    public static double logFunction(double n1){
-        double logvalue = Math.log(n1);
-        return logvalue;
-        }
-    //Log Function
-    public static double logFunction10(double n2) {
-        double log10result = Math.log10(n2);
-        return log10result;
-        }
-    //Anti Log
-    public static double antiLog(double n1){
 
-        double y = Math.log(n1); // Calculate the natural log of x
-        double inverselog = Math.exp(y);
-        //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
-        //        double inverselog = Math.pow(base, y);
-        return inverselog;
-
-        }
-    //
-
-    // Methods to accept 2 input values for exponentiation
-    public static double[] acceptArrayInput() {
-        double[] expInput = {0, 0};
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter any number: ");
-        expInput[0] = scan.nextInt();
-        System.out.print("Enter any number: ");
-        expInput[1] = scan.nextInt();
-        scan.close();
-        return expInput;
+    public static int invSin(double radians){
+        int invSin = (int)Math.toDegrees(Math.asin(radians));
+        return invSin;
     }
 
-        // Methods to accept double input value
-        public static double acceptDoubleNum() {
-            Scanner scan = new Scanner(System.in);
-            System.out.print("Enter any number: ");
-            double x = scan.nextInt();
-            scan.close();
-            return x;
-        }
-        // Methods to accept int input value
-        public static int acceptIntNum() {
-            Scanner scan = new Scanner(System.in);
-            System.out.print("Enter any number: ");
-            int x = scan.nextInt();
-            scan.close();
-            return x;}
-
-        public static long accepLongNum() {
-            Scanner scan = new Scanner(System.in);
-            System.out.print("Enter any number: ");
-            long x = scan.nextInt();
-            scan.close();
-            return x;
+    public static int invCos(double radians){
+        int invCos = (int)Math.toDegrees(Math.acos(radians));
+        return invCos;
     }
 
-//    public static int accept2Integer() {
-//        Scanner scan = new Scanner(System.in);
-//        System.out.print("Enter any number: ");
-//        int x1 = scan.nextInt();
-//        System.out.print("Enter any number: ");
-//        int x2 = scan.nextInt();
-//        scan.close();
-//        return x1,x2;
-//    }
-    //////////////////////////////////////////////////////////////////////////////////////////////
+  
+
+    public static int invTan(double radians){
+        int invTan = (int)Math.toDegrees(Math.atan(radians));
+        return invTan;
+    }
+
+        //
+        //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-}
-
-//}

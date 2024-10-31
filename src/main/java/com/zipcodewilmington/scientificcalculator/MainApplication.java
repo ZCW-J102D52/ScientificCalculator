@@ -9,59 +9,10 @@ import java.util.Scanner;
 import java.lang.Math;
 
 
-
-    //Switch trig units mode(Degrees, Radians):
-    /*{
-        double radians = 0;
-        double degrees = 0;
-        degrees = radians * (degrees / Math.PI);
-        radians = degrees * (Math.PI / 180);
-
-        System.out.println(Math.toRadians(degrees));
-        System.out.println(degrees + " degrees is " + radians + " radians.");
-        System.out.println();
-
-        System.out.println(Math.toDegrees(radians));
-        System.out.println(radians + " radians is " + degrees + " degrees.");
-        System.out.println(); */
-
-
-//    public static class AngleConverter
-//      public static degrees1();{
-//      AngleConverter angleInDegrees = new AngleConverter(45, "degrees");
-//      AngleConverter angleInRadians = new AngleConverter(Math.PI / 180, "radians");}
-//
-////    System.out.println("degrees to radians: " + angleInDegrees.toRadians());
-////    System.out.println("Radians to degrees: " + angleInRadians.toDegrees());
-//
-//        public AngleConverter(double v, String radians) {
-//        }
-//
-//        public static double toRadians(double degrees) {
-//           return Math.toRadians(degrees);
-//        }
-//
-//        public static <degrees> void toDegrees(double radians) {
-////           return Math.toDegrees(radians);
-//
-//            double num1 = 90;
-//            Double degrees1 = Console.getDoubleInput("Enter a double.");
-//            double radians1 = Math.toRadians(degrees1);
-//            System.out.println(degrees1 + " degrees is " + radians1 + " radians.");
-//            System.out.println();
-//
-//            double radians2 = Math.PI / 2;
-//            double degrees2 = Math.toDegrees(radians2);
-//            System.out.println(radians2 + " radians is " + degrees2 + " degrees.");
-//            System.out.println(num1);
-//        }
-//
-
-
 public class MainApplication {
     public static void main(String[] args) {
 
-        try {
+        
 
             System.out.println("*********************************************");
             System.out.println("*                                           *");
@@ -83,19 +34,14 @@ public class MainApplication {
                 }
 
                 switch (operator) {
-                    //Addition Sharmin
-                    case "+":
-                    case "add":
-                    case "addition":
-                    case "plus":
-                        double num2 = Console.getSecondDoubleInput("Enter Second number:");
-                        System.out.println("Result: " + Opera.add(num1, num2));
-                        //num1 += num2;
-                        //return num1;
-                        //public double add(double a, double b) {
-                        //return a + b;
-
-                        // }
+                //Addition Sharmin
+                case "+":
+                case "add":
+                case "addition":
+                case "plus":
+                    double plus2 = Console.getSecondDoubleInput("Enter Second number:");
+                    System.out.println("Result: " + Opera.addition(num1, plus2));
+                  break;
                         break;
                     //Subtraction Sharmin
                     case "-":
@@ -120,10 +66,18 @@ public class MainApplication {
                         double divid2 = Console.getSecondDoubleInput("Enter second number");
                         System.out.println("Result: " + Opera.divide(num1, divid2));
                         break;
-                    //Divide by zero error Ron
+                    //Divide by zero error Ron            
+                
+                // Divide by zero error Ron
+                //try {
 
-
-
+//                  } catch (ArithmeticException e) {
+//                    System.out.println("You are not allowed to divide by zero.");
+//                  } catch (Exception e) {
+//                    System.out.println("Error: Please try again");
+//                 } finally {
+//                      System.out.println("Please continue");
+//                  }
 
                     break;
                     //Radians to Degrees Sharmin
@@ -149,20 +103,20 @@ public class MainApplication {
                     //Invert sign Deepti
                 case "invert sign":
                 case "inv sign":
-                      InverseFunction inverse = new InverseFunction();
-                      inverse.calculateInvertSign();
+                      InverseFunction inverse1 = new InverseFunction();
+                      inverse1.calculateInvertSign();
                       break;
                 //Square Deepti
                 case "square":
                 case "sq":
-                      double square = square(acceptDoubleNum());
+                      double square = Opera.square(Opera.acceptDoubleNum());
                       System.out.println("Square of the given number is : ");
                       System.out.printf("%.2f", square);
                       break;
               //Square Root Deepti
                 case "square root":
                 case "sq rt":
-                      double root = squareRoot(acceptDoubleNum());
+                      double root = Opera.squareRoot(Opera.acceptDoubleNum());
                       System.out.println("SquareRoot of the given number is : ");
                       System.out.printf("%.2f", root);
                       break;
@@ -170,27 +124,29 @@ public class MainApplication {
                 case "exponential":
                 case "expo":
                 case "exponent":
-                      double exponentiation = exponentiation(acceptDoubleNum());
-                      System.out.println("exponentiation of the given number is : ");
-                      System.out.printf("%.2f", exponentiation);
-                      break;
+
+                    //Exponentiation
+                    double [] input = Opera.acceptArrayInput();
+                    double exponentiation = Opera.exponentiation(input[0],input[1]);
+                    System.out.println("exponentiation of the given number is : " + exponentiation);
+                    break;
                 //Factorial Deepti
                 case "factorial":
                 case "fact":
-                      long fact = factorial(acceptIntNum());
+                      long fact = Opera.factorial(Opera.acceptIntNum());
                       System.out.println("Factorial of the given number is : " + fact);
                        break;
                 //Log Value Deepti
                 case "log value":
                 case "log val":
-                      double logValue = logFunction(acceptDoubleNum());
+                      double logValue = Opera.logFunction(Opera.acceptDoubleNum());
                       System.out.println("Logarithm of the given number is : ");
                       System.out.printf("%.2f", logValue);
                       break;
                 //Log Function Deepti
                 case "log function":
                 case "log func":
-                        double log10Value = logFunction10(acceptDoubleNum());
+                        double log10Value = Opera.logFunction10(Opera.accepLongNum());
                         System.out.println("Logarithm of the given number is : ");
                         System.out.printf("%.2f", log10Value);
                         break;
@@ -199,66 +155,82 @@ public class MainApplication {
                  case "anti logarithm":
                  case "inverse logarithm":
                  case "inverse log":
-                        double antiLog = antiLog(acceptDoubleNum());
+                        double antiLog = Opera.antiLog(Opera.acceptDoubleNum());
                         System.out.println("Inverse Logarithm of the given number is : ");
                         System.out.printf("%.2f", antiLog);
                           break;                        
                 //Sine Al
                 case "sine":
                 case "sin":
-                        System.out.print("Enter the angle in Degrees:\n");
-                        double angleInDegrees = scan.nextInt();
-                        double angleInRadians = Math.toRadians(angleInDegrees);
-                        double sineValue = Math.sin(angleInRadians);
-                        System.out.println("Sine of the given number is : " + sineValue);
-                          break;
+                        double sinValue = Opera.sin(Opera.acceptIntNum());
+                        System.out.println("Sine of the given number is :" + sinValue + " radians.");
+                        break;
+                        //code below is what I had before making sin into a method
+//                        System.out.print("Enter the angle in Degrees:\n");
+//                        double angleInDegrees = Opera.acceptIntNum();
+//                        double angleInRadians = Math.toRadians(angleInDegrees);
+//                        double sineValue = Math.sin(angleInRadians);
+//                        System.out.println("Sine of the given number is : " + sineValue);
+//                        break;
                 //Cosine Al
                 case "cosine":
                 case "co sine":
                 case "cosin":
-                        System.out.print("Enter the angle in Degrees:\n");
-                        double angleInDegrees = scan.nextInt();
-                        double angleInRadians = Math.toRadians(angleInDegrees);
-                        double cosValue = Math.cos(angleInRadians);
-                        System.out.println("Cosine of the given number is : " + cosValue);
-                          break;
+                    double cosValue = Opera.cos(Opera.acceptIntNum());
+                    System.out.println("Cosine of the given number is :" + cosValue + " radians.");
+                    break;
+                    //What I had before making a method
+//                        System.out.print("Enter the angle in Degrees:\n");
+//                        double angleInDegreesCos = Opera.acceptIntNum();
+//                        double angleInRadiansCos = Math.toRadians(angleInDegreesCos);
+//                        double cosValue = Math.cos(angleInRadiansCos);
+//                        System.out.println("Cosine of the given number is : " + cosValue);
+//                          break;
                 //Tangent Al
                 case "tangent":
                 case "tan":
-                        System.out.print("Enter the angle in Degrees:\n");
-                        double angleInDegrees = scan.nextInt();
-                        double angleInRadians = Math.toRadians(angleInDegrees);
-                        double tanValue = Math.tan(angleInRadians);
-                        System.out.print("Tangent of the given number is : " + tanValue);
-                          break;
+                    double tanValue = Opera.tan(Opera.acceptIntNum());
+                    System.out.println("Tangent of the given number is :" + tanValue + " radians.");
+                    break;
+//                        System.out.print("Enter the angle in Degrees:\n");
+//                        double angleInDegreesTan = Opera.acceptIntNum();
+//                        double angleInRadiansTan = Math.toRadians(angleInDegreesTan);
+//                        double tanValue = Math.tan(angleInRadiansTan);
+//                        System.out.print("Tangent of the given number is : " + tanValue);
+//                          break;
                 //Inverse Sine Al
                 case "inverse sine":
                 case "inverse sin":
-                        System.out.print("Enter a value between -1 and 1:\n");
-                        double sine = scan.nextDouble();
-                        double inverseSineRadians = Math.asin(sine);
-                        double inverseSineDegrees = Math.toDegrees(inverseSineRadians);
-                        System.out.println("Inverse Sine of the given number is : " + inverseSineDegrees + " degrees");
-                          break;
+                    int invSinValue = Opera.invSin(Opera.acceptIntNum());
+                    System.out.println("Inverse sine of the given value is :" + invSinValue + " degrees.");
+                    break;
+                    //what I had before making method
+//                        System.out.print("Enter a value between -1 and 1:\n");
+//                        double sine = Opera.acceptDoubleNum();
+//                        double inverseSineRadians = Math.asin(sine);
+//                        double inverseSineDegrees = Math.toDegrees(inverseSineRadians);
+//                        System.out.println("Inverse Sine of the given number is : " + inverseSineDegrees + " degrees");
+//                        break;
                 //Inverse Cosine Al
                 case "inverse cosine":
                 case "inverse co sine":
                 case "inverse cosin":
-                        System.out.print("Enter a value between -1 and 1:\n");
-                        double cos = scan.nextDouble();
-                        double inverseCosRadians = Math.acos(cos);
-                        double inverseCosDegrees = Math.toDegrees(inverseCosRadians);
-                        System.out.println("Inverse Cosine of the given number is : " + inverseCosDegrees + " degrees");
-                          break;
+                    int invCosValue = Opera.invCos(Opera.acceptIntNum());
+                    System.out.println("Inverse Cosine of the given value is :" + invCosValue + " degrees.");
+                    break;
+                        //what I had before making method
+//                        System.out.print("Enter a value between -1 and 1:\n");
+//                        double cos = Opera.acceptDoubleNum();
+//                        double inverseCosRadians = Math.acos(cos);
+//                        double inverseCosDegrees = Math.toDegrees(inverseCosRadians);
+//                        System.out.println("Inverse Cosine of the given number is : " + inverseCosDegrees + " degrees");
+//                          break;
                 //Inverse Tangent Al
                 case "inverse tangent":
                 case "inverse tan":
-                        System.out.print("Enter a value between -1 and 1:\n");
-                        double tan = scan.nextDouble();
-                        double inverseTanRadians = Math.atan(tan);
-                        double inverseTanDegrees = Math.toDegrees(inverseTanRadians);
-                        System.out.println("Inverse Tan of the given number is : " + inverseTanDegrees + " degrees");
-                         break; */
+                        int invTanValue = Opera.invTan(Opera.acceptIntNum());
+                    System.out.println("Inverse Tangent of the given value is :" + invTanValue + " degrees.");
+                    break; 
                     //Bunny Enda
                     case "bunny":
                         Console.getBunny();
@@ -282,91 +254,22 @@ public class MainApplication {
 
                 }
             }
-        }  catch(ArithmeticException e){
-        System.out.println("You are not allowed to divide by zero.");
-    } catch(Exception e){
-        System.out.println("Error: Please try again");
-    } finally{
-        System.out.println("Please continue");
-        }
-/*
-      //////////////////////////////   METHODS - SHARMIN  ///////////////////////////////////////
-            //Subtraction Method
-            public static double subtract(double a, double b) {
-                return a - b; }
-            //Multiplication Method
-                public static double multiply(double a, double b) {
-                    return a * b; }
-            //Division Method
-            public static double divide(double a, double b) {
-                return a / b;}
-            //Radians to Degrees
-            public static double degrees(double a, double b) {
-                double degrees = 0;
-                double radians;
-                return degrees;}
-            //Degrees to Radians
-            public static double radians(double a, double b) {
-                double radians = 0;
-                double degrees;
-                return radians;}
-     ///////////////////////////////   METHODS DEEPTI   ///////////////////////////////////////////
-            // Methods to accept double input value
-            public static double acceptDoubleNum() {
-                Scanner scan = new Scanner(System.in);
-                System.out.print("Enter any number: ");
-                double x = scan.nextInt();
-                scan.close();
-                return x;
-            }
-            // Methods to accept int input value
-            public static int acceptIntNum() {
-                Scanner scan = new Scanner(System.in);
-                System.out.print("Enter any number: ");
-                int x = scan.nextInt();
-                scan.close();
-                return x;}
-            // Square
-            public static double square(double x2) {
-                double square = Math.pow(x2, 2);
-                return square;}
-           //Square Root
-            public static double squareRoot(double x1) {
-                double result = Math.sqrt(x1);
-                return result;}
-            //Exponential
-            public static double exponentiation(double x3) {
-                double exponent = Math.exp(x3);
-                return exponent;}
-            //Factorial
-            public static long factorial(long n1) {
-                long result = 1L;
-                for (long i = 1; i <= n1; i++) {result *= i;
-                    return result;
-                }
-            }
-            //Log Value
-            public static double logFunction(double n1){
-                double logvalue = Math.log(n1);
-                return logvalue;}
-            //Log Function
-            public static double logFunction10(double n2) {
-                double log10result = Math.log10(n2);
-                return log10result;}
-            //Anti Log
-            public static double antiLog(double n1){
-                double y = Math.log(n1); // Calculate the natural log of x
-                double inverselog = Math.exp(y);
-                //        double y = Math.log(n1) / Math.log(base); // Calculate log base 'base' of x
-                //        double inverselog = Math.pow(base, y);
-                return inverselog; }
-            //
+
+//         }  catch(ArithmeticException e){
+//         System.out.println("You are not allowed to divide by zero.");
+//     } catch(Exception e){
+//         System.out.println("Error: Please try again");
+//     } finally{
+//         System.out.println("Please continue");
+//         }
+      
      //////////////////////////////////////////////////////////////////////////////////////////////
-            //Quit Enda */
+            //Quit Enda 
             toQuit = Console.toQuit("All done?");
             
+
               //Offer Memory Enda
-           /* if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
+            if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
                 String wantMem = Console.sendToMem("Want to send to Memory?");
                 if (wantMem.equals("y")) {
                     System.out.println("Method to memory");
@@ -384,7 +287,9 @@ public class MainApplication {
                     memoryValue = 0.0;
                       }
                 }
-            } */
+            } 
+
+//            
               //Reset and goodbye loop Enda
             System.out.println("toQuit value at end of loop: "+toQuit);
             if (!(toQuit.equals("yes") || toQuit.equals("y"))) {

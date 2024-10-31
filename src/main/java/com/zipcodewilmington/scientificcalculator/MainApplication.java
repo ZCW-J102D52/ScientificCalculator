@@ -9,55 +9,6 @@ import java.util.Scanner;
 import java.lang.Math;
 
 
-
-    //Switch trig units mode(Degrees, Radians):
-    /*{
-        double radians = 0;
-        double degrees = 0;
-        degrees = radians * (degrees / Math.PI);
-        radians = degrees * (Math.PI / 180);
-
-        System.out.println(Math.toRadians(degrees));
-        System.out.println(degrees + " degrees is " + radians + " radians.");
-        System.out.println();
-
-        System.out.println(Math.toDegrees(radians));
-        System.out.println(radians + " radians is " + degrees + " degrees.");
-        System.out.println(); */
-
-
-//    public static class AngleConverter
-//      public static degrees1();{
-//      AngleConverter angleInDegrees = new AngleConverter(45, "degrees");
-//      AngleConverter angleInRadians = new AngleConverter(Math.PI / 180, "radians");}
-//
-////    System.out.println("degrees to radians: " + angleInDegrees.toRadians());
-////    System.out.println("Radians to degrees: " + angleInRadians.toDegrees());
-//
-//        public AngleConverter(double v, String radians) {
-//        }
-//
-//        public static double toRadians(double degrees) {
-//           return Math.toRadians(degrees);
-//        }
-//
-//        public static <degrees> void toDegrees(double radians) {
-////           return Math.toDegrees(radians);
-//
-//            double num1 = 90;
-//            Double degrees1 = Console.getDoubleInput("Enter a double.");
-//            double radians1 = Math.toRadians(degrees1);
-//            System.out.println(degrees1 + " degrees is " + radians1 + " radians.");
-//            System.out.println();
-//
-//            double radians2 = Math.PI / 2;
-//            double degrees2 = Math.toDegrees(radians2);
-//            System.out.println(radians2 + " radians is " + degrees2 + " degrees.");
-//            System.out.println(num1);
-//        }
-//
-
-
 public class MainApplication {
     public static void main(String[] args) {
 
@@ -86,14 +37,8 @@ public class MainApplication {
                 case "add":
                 case "addition":
                 case "plus":
-                 //   double num2 = Console.getSecondDoubleInput("Enter Second number:");
-                    //System.out.println("Result: " + add(num1, num2));
-                    //num1 += num2;
-                    //return num1;
-                    //public double add(double a, double b) {
-                    //return a + b;
-
-                      // }
+                    double plus2 = Console.getSecondDoubleInput("Enter Second number:");
+                    System.out.println("Result: " + Opera.addition(num1, plus2));
                   break;
                 //Subtraction Sharmin
                 case "-":
@@ -119,16 +64,16 @@ public class MainApplication {
                     System.out.println("Result: " + Opera.divide(num1, divid2));
                     break;
                 // Divide by zero error Ron
-                 try {
+                try {
 
                   } catch (ArithmeticException e) {
                     System.out.println("You are not allowed to divide by zero.");
                   } catch (Exception e) {
                     System.out.println("Error: Please try again");
-                  } finally {
+                 } finally {
                       System.out.println("Please continue");
                   }
-                    break;
+
               //Radians to Degrees Sharmin  
                 case "radians to degrees":
                 case "rads to degs":
@@ -363,26 +308,26 @@ public class MainApplication {
             //Quit Enda */
             toQuit = Console.toQuit("All done?");
             
-              //Offer Memory Enda
-            if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
-                String wantMem = Console.sendToMem("Want to send to Memory?");
-                if (wantMem.equals("y")) {
-                    System.out.println("Method to memory");
-                    //Memory function Ron  
-                    double memoryValue = 0.0;;
-                    public void setMPlus(double value;) {
-                    memoryValue += value;
-                      }
-
-                    public double getMRC() {
-                    return memoryValue;
-                      }
-                
-                  public void getMC() {
-                    memoryValue = 0.0;
-                      }
-                }
-            }
+//              //Offer Memory Enda
+//            if (!(toQuit.equals("yes") || toQuit.equals("y"))) {
+//                String wantMem = Console.sendToMem("Want to send to Memory?");
+//                if (wantMem.equals("y")) {
+//                    System.out.println("Method to memory");
+//                    //Memory function Ron
+//                    double memoryValue = 0.0;;
+//                    public void setMPlus(double value;) {
+//                    memoryValue += value;
+//                      }
+//
+//                    public double getMRC() {
+//                    return memoryValue;
+//                      }
+//
+//                  public void getMC() {
+//                    memoryValue = 0.0;
+//                      }
+//                }
+//            }
               //Reset and goodbye loop Enda
             System.out.println("toQuit value at end of loop: "+toQuit);
             if (!(toQuit.equals("yes") || toQuit.equals("y"))) {

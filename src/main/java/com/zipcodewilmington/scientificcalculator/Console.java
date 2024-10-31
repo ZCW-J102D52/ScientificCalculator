@@ -29,8 +29,8 @@ public class Console {
         public static String getStringInput(String prompt) {
             Scanner scanner = new Scanner(System.in);
             println(prompt);
-        String operator = scanner.nextLine().toLowerCase();
-        return operator;
+           String operator = scanner.nextLine().toLowerCase();
+           return operator;
     }
 
     public static Integer getFirstIntegerInput(String prompt) {

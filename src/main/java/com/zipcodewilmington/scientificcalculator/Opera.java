@@ -11,6 +11,9 @@ public class Opera{
 
 
     //////////////////////////////   METHODS - SHARMIN  ///////////////////////////////////////
+    //Addition Method
+    public static double addition(double a, double b) {
+        return a + b;}
     //Subtraction Method
     public static double subtract(double a, double b) {
         return a - b;
@@ -33,8 +36,7 @@ public class Opera{
     public static double radians(double a, double b) {
         double radians = 0;
         double degrees;
-        return radians;
-    }
+        return radians;}
 
 
 
@@ -139,4 +141,4 @@ public class Opera{
 
 }
 
-}
+//}

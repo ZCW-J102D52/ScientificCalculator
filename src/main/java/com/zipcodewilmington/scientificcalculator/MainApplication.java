@@ -147,7 +147,7 @@ public class MainApplication {
                         inverse.calculateInverse();
                         break;
                     //Invert sign Deepti
-                /* case "invert sign":
+                case "invert sign":
                 case "inv sign":
                       InverseFunction inverse = new InverseFunction();
                       inverse.calculateInvertSign();

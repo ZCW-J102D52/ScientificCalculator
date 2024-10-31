@@ -56,7 +56,7 @@ public class Opera {
 
 
     // Methods to accept int input value
-    public static int acceptIntNum() {
+    public static long accepLongNum() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter any number: ");
         long x = scan.nextInt();
@@ -101,7 +101,7 @@ public class Opera {
         return result;
     }
 
-}
+
 
     //Log Value
     public static double logFunction ( double n1){

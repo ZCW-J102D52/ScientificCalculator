@@ -2,34 +2,42 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 
-public class Opera{
-
-
-
-
-
+public class Opera {
 
 
     //////////////////////////////   METHODS - SHARMIN  ///////////////////////////////////////
+    public static double add(double a, double b) {
+        return a + b;
+    }
     //Subtraction Method
     public static double subtract(double a, double b) {
-        return a - b; }
+        return a - b;
+    }
+
     //Multiplication Method
     public static double multiply(double a, double b) {
-        return a * b; }
+        return a * b;
+    }
+
     //Division Method
     public static double divide(double a, double b) {
-        return a / b;}
+        return a / b;
+    }
+
     //Radians to Degrees
     public static double degrees(double a, double b) {
         double degrees = 0;
         double radians;
-        return degrees;}
+        return degrees;
+    }
+
     //Degrees to Radians
     public static double radians(double a, double b) {
         double radians = 0;
         double degrees;
-        return radians;}
+        return radians;
+    }
+
     ///////////////////////////////   METHODS DEEPTI   ///////////////////////////////////////////
     // Methods to accept double input value
     public static double acceptDoubleNum() {
@@ -39,35 +47,49 @@ public class Opera{
         scan.close();
         return x;
     }
+
     // Methods to accept int input value
     public static int acceptIntNum() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter any number: ");
         int x = scan.nextInt();
         scan.close();
-        return x;}
+        return x;
+    }
 
     // Square
     public static double square(double x2) {
         double square = Math.pow(x2, 2);
-        return square;}
+        return square;
+    }
+
     //Square Root
     public static double squareRoot(double x1) {
         double result = Math.sqrt(x1);
-        return result;}
+        return result;
+    }
+
     //Exponential
     public static double exponentiation(double x3) {
         double exponent = Math.exp(x3);
-        return exponent;}
+        return exponent;
+    }
+
     //Factorial
     public static long factorial(long n1) {
         long result = 1L;
-        for (long i = 1; i <= n1; i++) {result *= i;
-            return result;
+        for (long i = 1; i <= n1; i++) {
+            result *= i;
+            //return result;
         }
 
+        return result;
+    }
+
+}
+
     //Log Value
-    public static double logFunction(double n1){
+   /* public static double logFunction(double n1){
         double logvalue = Math.log(n1);
         return logvalue;}
     //Log Function
@@ -82,11 +104,4 @@ public class Opera{
         //        double inverselog = Math.pow(base, y);
         return inverselog; }
     //
-    //////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-}
+    /////////////////////////////////////////////////////////////////////////////////////////////

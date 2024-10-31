@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientific_calculator;
 
 import com.zipcodewilmington.scientificcalculator.InverseFunction;
 import com.zipcodewilmington.scientificcalculator.MainApplication;
+import com.zipcodewilmington.scientificcalculator.Opera;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -81,6 +82,47 @@ public class TestMainApplication {
         MainApplication mainApplication = new MainApplication();
         double inverselogresult = mainApplication.antiLog(10);
         assertEquals(10, inverselogresult, 0.001);
+    }
+
+
+
+    @Test
+    public void subtract() {
+
+        Opera opera = new Opera();
+       double subtractresult = Opera.subtract(15, 5);
+        assertEquals(10, subtractresult, 0.001);
+
+    }
+
+    @Test
+    public void multiply() {
+        Opera opera = new Opera();
+        double multiplyresult = Opera.multiply(5, 5);
+        assertEquals(25, multiplyresult, 0.001);
+    }
+
+    @Test
+    public void addition() {
+        Opera opera = new Opera();
+        double additionresult = Opera.add(15, 5);
+        assertEquals(20, additionresult, 0.001);
+
+    }
+    @Test
+    public void degrees() {
+        Opera opera = new Opera();
+        double degreeresult = Opera.degrees(8, 9);
+        assertEquals(20, degreeresult, 0.001);
+
+    }
+
+    @Test
+    public void radians() {
+        Opera opera = new Opera();
+        double radiansresult = Opera.radians(4, 2);
+        assertEquals(20, radiansresult, 0.001);
+
     }
 
 

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.Scanner;
+
 public class Opera {
 
 
@@ -39,7 +41,38 @@ public class Opera {
 
 
     ///////////////////////////////   METHODS DEEPTI   ///////////////////////////////////////////
-
+//Methods to accept int input value
+    public static int acceptIntNum() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter any number: ");
+        int x = scan.nextInt();
+        scan.close();
+        return x;}
+    // Methods to accept double input value
+    public static double acceptDoubleNum() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter any number: ");
+        double x = scan.nextInt();
+        scan.close();
+        return x;
+    }
+    public static long accepLongNum() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter any number: ");
+        long x = scan.nextInt();
+        scan.close();
+        return x;
+    }
+    public static double[] acceptArrayInput() {
+        double[] expInput = {0, 0};
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter any number: ");
+        expInput[0] = scan.nextInt();
+        System.out.print("Enter any number: ");
+        expInput[1] = scan.nextInt();
+        scan.close();
+        return expInput;
+    }
 
     // Square
     public static double square(double x2) {

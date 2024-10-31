@@ -1,9 +1,6 @@
 package com.zipcodewilmington.scientific_calculator;
 
 import com.zipcodewilmington.scientificcalculator.InverseFunction;
-import com.zipcodewilmington.scientificcalculator.MainApplication;
-import com.zipcodewilmington.scientificcalculator.Opera;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

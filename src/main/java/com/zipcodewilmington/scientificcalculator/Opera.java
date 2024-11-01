@@ -23,6 +23,10 @@ public class Opera {
 
     //Division Method
     public static double divide(double a, double b) {
+        if (b == 0){
+            throw new ArithmeticException("You can not divide by zero");
+        }
+
         return a / b;
     }
 
@@ -161,6 +165,18 @@ public static int invTan(double radians){
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-
+//Memory
+    //set
+    public static double setMem(double a, double b) {
+        return a=b;
+    }
+    //recall
+    public static double recallMem(double a, double b) {
+        return a=b;
+    }
+    //reset
+    public static double clearMem(double a){
+        return a=0.0;
+    }
 }
 

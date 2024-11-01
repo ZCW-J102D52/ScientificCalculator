@@ -20,7 +20,7 @@ public class MainApplication {
         System.out.println("*********************************************");
         String toQuit = "n";
         Double num1 = Console.getFirstDoubleInput("*              Enter a Number               *");
-
+        Double mem = 0.0;
             System.out.println("*********************************************");
             System.out.println("*  Type the name of the operation or symbol *");
             System.out.println("*        You can even summon a Bunny        *");
@@ -46,7 +46,7 @@ public class MainApplication {
                     System.out.println("*       Co Sine, Tangent, Inverse Sine      *");
                     System.out.println("*      Inverse Co Sine, Inverse Tangent     *");
                     System.out.println("*   Set Memory, Recall Memory, Memory Wipe  *");
-                    System.out.println("*                  Bunny                    *");
+                    System.out.println("*             Show Memory, Bunny            *");
                     System.out.println("*********************************************");
                     System.out.println("Current number is "+num1);
                     break;
@@ -81,7 +81,7 @@ public class MainApplication {
                 case "/":
                 case "divide":
                 case "division":
-                    double divid2 = Console.getSecondDoubleInput("num1 / Next Number");
+                    double divid2 = Console.getSecondDoubleInput(num1 +" / Next Number");
                     num1 = Opera.divide(num1,divid2);
                     System.out.println("Result: " + num1);
                     break;
@@ -137,6 +137,7 @@ public class MainApplication {
                 case "exponential":
                 case "expo":
                 case "exponent":
+                case "^":
 
                     //Exponentiation
                     double[] input = Opera.acceptArrayInput();
@@ -255,23 +256,31 @@ public class MainApplication {
                 //Memory Set Ron
                 case "mem":
                 case "set memory":
+                case "memory set":
                 case "memory":
                     //Memory Set
-                        //At the top somewhere, you can add a double var named mem
-                        //Have this method set mem to num1.
+                    mem = Opera.setMem(mem,num1);
+                    System.out.println("Memory is set to "+mem);
                     break;
                 //Memory Recall Ron
                 case "mrc":
                 case "memory recall":
-                    //make the method set num1 to memory.
-                    //Display it.
+                case "recall memory":
+                    num1 = Opera.recallMem(num1,mem);
+                    System.out.println("Number changed to memory: "+num1);
                     break;
                 //Memory Clear Ron
                 case "mc":
                 case "memory wipe":
-                    //make this set mem to 0.
-                    //display message showing mem's 0 value.
+                case "wipe memory":
+                    mem = Opera.clearMem(mem);
+                    System.out.println("Memory has been reset");
                   break;
+                case "show memory":
+                case "show mem":
+                case "memory show":
+                    System.out.println(mem);
+                    break;
                     //Bunny Enda
                 case "bunny":
                     Console.getBunny();

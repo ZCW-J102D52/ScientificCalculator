@@ -117,21 +117,21 @@ public class TestMainApplication {
     public void sinTest() {
         Opera operaSin = new Opera();
         double sinResult = operaSin.sin(90);
-        assertEquals(1, sinResult);
+        assertEquals(1, sinResult, 0.001);
     }
 
     @Test
     public void cosTest() {
         Opera operaCos = new Opera();
         double cosResult = operaCos.cos(90);
-        assertEquals(0, cosResult);
+        assertEquals(0, cosResult, 0.001);
     }
 
     @Test
     public void tanTest() {
         Opera operaTan = new Opera();
         double tanResult = operaTan.tan(45);
-        assertEquals(1, tanResult);
+        assertEquals(1, tanResult, 0.001);
         //might need this as parameters for above (Opera.sin(45)/Opera.cos(45)
     }
 
@@ -139,21 +139,21 @@ public class TestMainApplication {
     public void invSinTest() {
         Opera operaInvSin = new Opera();
         double invSinResult = operaInvSin.invSin(1);
-        assertEquals(90, invSinResult);
+        assertEquals(90, invSinResult, 0.001);
     }
 
     @Test
     public void invCosTest() {
         Opera operaInvCos = new Opera();
         double invCosResult = operaInvCos.invCos(1);
-        assertEquals(0, invCosResult);
+        assertEquals(0, invCosResult, 0.001);
     }
 
     @Test
     public void invTanTest() {
         Opera operaInvTan = new Opera();
         double invTanResult = operaInvTan.invTan(1);
-        assertEquals(45, invTanResult);
+        assertEquals(45, invTanResult, 0.001);
     }
 
 

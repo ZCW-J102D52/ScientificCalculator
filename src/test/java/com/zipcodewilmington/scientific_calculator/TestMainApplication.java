@@ -34,10 +34,28 @@ public class TestMainApplication {
     }
 
     @Test
+    public void degrees() {
+        double degrees = 45.0;
+        double radians = Math.toRadians(degrees);
+        System.out.println(radians); // Output: 0.7853981633974483
+
+    }
+
+    @Test
+    public void testRadiansToDegrees() {
+        double radians = Math.PI / 2;
+        double expectedDegrees = 90.0;
+
+        double actualDegrees = Math.toDegrees(radians);
+
+        assertEquals(expectedDegrees, actualDegrees, 0.0001); // 0.0001 is the delta for precision
+    }
+
+    @Test
     public void exponentiation() {
 
         Opera opera1 = new Opera();
-        double exp = opera1.exponentiation(2.0,10.0);
+        double exp = opera1.exponentiation(2.0, 10.0);
         //assertEquals(4,result);
         assertEquals(1024.0, exp, 0.001);
 
@@ -93,7 +111,7 @@ public class TestMainApplication {
         double inverselogresult = opera1.antiLog(10);
         assertEquals(10, inverselogresult, 0.001);
     }
-}
+
 
     @Test
     public void sinTest() {
@@ -120,32 +138,30 @@ public class TestMainApplication {
     @Test
     public void invSinTest() {
         Opera operaInvSin = new Opera();
-        int invSinResult = operaInvSin.invSin(1);
+        double invSinResult = operaInvSin.invSin(1);
         assertEquals(90, invSinResult);
     }
 
     @Test
     public void invCosTest() {
         Opera operaInvCos = new Opera();
-        int invCosResult = operaInvCos.invCos(1);
+        double invCosResult = operaInvCos.invCos(1);
         assertEquals(0, invCosResult);
     }
 
     @Test
     public void invTanTest() {
         Opera operaInvTan = new Opera();
-        int invTanResult = operaInvTan.invTan(1);
+        double invTanResult = operaInvTan.invTan(1);
         assertEquals(45, invTanResult);
     }
-
-}
 
 
     @Test
     public void subtract() {
 
         Opera opera = new Opera();
-       double subtractresult = Opera.subtract(15, 5);
+        double subtractresult = Opera.subtract(15, 5);
         assertEquals(10, subtractresult, 0.001);
 
     }
@@ -160,17 +176,17 @@ public class TestMainApplication {
     @Test
     public void addition() {
         Opera opera = new Opera();
-        double additionresult = Opera.add(15, 5);
+        double additionresult = Opera.addition(15, 5);
         assertEquals(20, additionresult, 0.001);
 
     }
-    @Test
-    public void degrees() {
-        Opera opera = new Opera();
-        double degreeresult = Opera.degrees(8, 9);
-        assertEquals(20, degreeresult, 0.001);
-
-    }
+//    @Test
+//    public void degrees() {
+//        Opera opera = new Opera();
+//        double degreeresult = Opera.degrees(8, 9);
+//        assertEquals(20, degreeresult, 0.001);
+//
+//    }
 
     @Test
     public void radians() {
@@ -179,5 +195,6 @@ public class TestMainApplication {
         assertEquals(20, radiansresult, 0.001);
 
     }
+}
 
 

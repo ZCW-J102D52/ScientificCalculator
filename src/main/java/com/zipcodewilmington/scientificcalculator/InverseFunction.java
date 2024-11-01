@@ -5,11 +5,7 @@ import java.util.Scanner;
     public class InverseFunction {
 
 
-        public  static double calculateInverse() {
-            Scanner scan = new Scanner(System.in);
-            System.out.print("Enter any number: ");
-            double y = scan.nextInt();
-           // I've commented this out so that it won't ask for an input instead of using num1
+        public static double calculateInverse(double y) {
 
 
             System.out.println("Original Input value : " + y);
@@ -25,15 +21,11 @@ import java.util.Scanner;
         }
 
         //Function to invert the sign of the number
-        public static int calculateInvertSign() {
+        public  static double calculateInvertSign(double a) {
 
-            Scanner scan = new Scanner(System.in);
-            System.out.print("Enter any number: ");
-            int num1 = scan.nextInt();
-
-            int number = Math.negateExact(num1);
+            int number = Math.negateExact((int) a);
             System.out.print("Inverted value of number is: " + number);
-            return number;
+            return (double)(number);
         }
 
  }

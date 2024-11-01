@@ -5,16 +5,16 @@ import java.util.Scanner;
     public class InverseFunction {
 
 
-        public static double calculateInverse() {
+        public  static double calculateInverse() {
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter any number: ");
             double y = scan.nextInt();
+           // I've commented this out so that it won't ask for an input instead of using num1
 
 
             System.out.println("Original Input value : " + y);
             System.out.println("Inverse of input value: ");
-            System.out.printf("%.2f", inverseNumF(y));
-            scan.close();
+            System.out.printf("%.2f %n", inverseNumF(y));
             return inverseNumF(y);
 
         }
@@ -36,7 +36,4 @@ import java.util.Scanner;
             return number;
         }
 
-    }
-
-
-
+ }

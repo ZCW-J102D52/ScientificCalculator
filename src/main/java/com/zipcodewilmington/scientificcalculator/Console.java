@@ -15,37 +15,11 @@ public class Console {
         print(output + "\n", args);
     }
 
-    public static int getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        return scanner.nextInt();
-    }
-  
-    public static Double getDoubleInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        return scanner.nextDouble(); }
-
         public static String getStringInput(String prompt) {
             Scanner scanner = new Scanner(System.in);
             println(prompt);
            String operator = scanner.nextLine().toLowerCase();
            return operator;
-    }
-
-    public static Integer getFirstIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        Integer num1 = scanner.nextInt();
-        return num1;
-    }
-
-    public static Integer getSecondIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        Integer num2 = scanner.nextInt();
-        return num2;
-
     }
 
     public static Double getFirstDoubleInput(String prompt) {
@@ -62,7 +36,8 @@ public class Console {
     }
 
     public static void clearTheScreen() {
-        System.out.print("\033\143");
+        for (int i=0;i<=20;i++){
+        System.out.println(" ");}
     }
 
     public static void getBunny() {
@@ -71,20 +46,9 @@ public class Console {
         System.out.println(" > ^ <");
     }
 
-    public static String sendToMem(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        String wantMem = scanner.nextLine().toLowerCase();
-        return wantMem;
-    }
 
-    public static String toQuit(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        String toQuit = scanner.nextLine().toLowerCase();
-        println("toquit value: "+toQuit);
-        return toQuit;
-    }
+
+
 
 
 

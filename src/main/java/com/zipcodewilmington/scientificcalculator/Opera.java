@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Opera {
 
     //////////////////////////////   METHODS - SHARMIN  ///////////////////////////////////////
-    //Addition Method
     public static double addition(double a, double b) {
         return a + b;}
+//    //Addition Method
+//    public static double addition(double a, double b) {
+//        return a + b;}
 
     //Subtraction Method
     public static double subtract(double a, double b) {
@@ -50,7 +52,7 @@ public class Opera {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter any number: ");
         double x = scan.nextInt();
-        scan.close();
+        //scan.close();
         return x;
     }
 
